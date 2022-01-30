@@ -9,4 +9,20 @@ h1 {
 
 h2 {
   font-family: "Cinzel Decorative", serif;
+  text-align: center;
+}
+
+h3 {
+  font-family: "Cinzel Decorative", serif;
+  text-align: center;
+}
+
+header 
+{
+  text-align: center;
+}
+
+footer
+{
+  text-align: center;
 }
