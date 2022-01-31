@@ -1,28 +1,47 @@
-body {
-    background-color: #9d8189;
-    font-family: Copperplate, Arial, sans-serif;
-  }
+body
+{
+  background-color: #9d8189;
+  font-family: Copperplate, Arial, sans-serif;
+}
   
-  h1 {
-    font-family: "Cinzel Decorative", serif;
-  }
+h1 
+{
+  font-family: "Cinzel Decorative", serif;
+}
   
-  h2 {
-    font-family: "Cinzel Decorative", serif;
-    text-align: center;
-  }
+h2
+{
+  font-family: "Cinzel Decorative", serif;
+  text-align: center;
+}
   
-  h3 {
-    font-family: "Cinzel Decorative", serif;
-    text-align: center;
-  }
+h3
+{
+  font-family: "Cinzel Decorative", serif;
+  text-align: center;
+}
   
-  header 
-  {
-    text-align: center;
-  }
+header 
+{
+  text-align: center;
+}
   
-  footer
-  {
-    text-align: center;
-  }
+footer
+{
+  text-align: center;
+}
+
+.center
+{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+figcaption
+{
+  font-size: x-small;
+  font-style: italic;
+  text-align: center;
+}
