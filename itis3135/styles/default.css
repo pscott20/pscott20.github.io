@@ -9,31 +9,19 @@ h1
   font-family: "Cinzel Decorative", serif;
 }
 
-h2 
+h2, h3
 {
   font-family: "Cinzel Decorative", serif;
   text-align: center;
 }
 
-h3 
-{
-  font-family: "Cinzel Decorative", serif;
-  text-align: center;
-}
-
-header 
-{
-  text-align: center;
-}
-
-footer
+header, footer
 {
   text-align: center;
 }
 
 .center
 {
-  display: block;
   margin-left: auto;
   margin-right: auto;
 }
@@ -45,8 +33,16 @@ figcaption
   text-align: center;
 }
 
+figcaption.table_caption
+{
+  font-size: x-small;
+  font-style: italic;
+}
+
 table, td
 {
+  margin-left: auto;
+  margin-right: auto;
   text-align: center;
   border: 1px solid black;
   border-collapse: collapse;
