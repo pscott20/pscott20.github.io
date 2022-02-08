@@ -26,3 +26,25 @@ footer
 {
   text-align: center;
 }
+
+a.nav-link:link
+{
+   color: #020088;
+   text-decoration: none;
+}
+a.nav-link:visited
+{
+   color: #020088;
+   text-decoration: none;
+}
+a.nav-link:hover
+{
+   color: #020088;
+   text-decoration: none;
+}
+a.nav-link:active
+{
+   color: #020088;
+   text-decoration: none;
+}
+
