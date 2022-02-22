@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Patrick Scott &#8869; ITIS3135 &#8869; Pink Sloth &#8869; Homepage</title>
+    <link rel="icon" href="images/favicon.ico">
+    <link href="styles/default.css" type="text/css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative&display=swap" rel="stylesheet"/>
+  </head>
+  <body>
+    <header>
+      <h1>Patrick Scott | ITIS3135 | Pink Sloth</h1>
+      <nav>
+        <a href="https://pscott20.github.io/itis3135/index.html" class="nav-link">Home</a>
+        |
+        <a href="https://pscott20.github.io/itis3135/introduction.html" class="nav-link">Introduction</a>
+        |
+        <a href="https://pscott20.github.io/itis3135/contract.html" class="nav-link">Contract</a>
+        |
+        <a href="https://pscott20.github.io/itis3135/tables.html" class="nav-link">HTML Tables</a>
+        |
+        <a href="https://pscott20.github.io/itis3135/forms.html" class="nav-link">HTML Forms</a>
+        |
+        <a href="https://pscott20.github.io/scottdesigns.net/index.html" class="nav-link">Brand</a>
+        |
+        <a href="https://pscott20.github.io/itis3135/website_evaluations.html" class="nav-link">Website Critique</a>
+        |
+        <a href="https://pscott20.github.io/stuff/ALL%20%5ECAPS.htm" class="nav-link">Bad Design</a>
+        |
+        <a href="https://pscott20.github.io/stuff/first_scripts.html" class="nav-link">First Scripts</a>
+      </nav>
+    </header>
+    <main>
+        <h3>My First Scripts Page</h3>
+        <h3><span id="timeOfDay"></span>
+        <script>
+            var today = new Date();
+            document.write("Today is " + today.toDateString());            
+        </script>
+        <br>
+        <br>
+        <form id="myForm">
+            <label for="name">Enter Name </label>
+            <input type="text" id="name"><br><br>
+            <label for="mood">Enter Mood </label>
+            <input type="text" id="mood"><br>
+            <button type="button" onclick="myFunction()">Submit</button>
+            <input type="button" onclick="resetFunction()" value="Reset Form">
+        </form>
+        <br>
+        <br>
+        <p id="output"></p>
+        <script>
+            function myFunction()
+            {
+                var name = document.getElementById("name").value;
+                var mood = document.getElementById("mood").value;
+                var output = "Scott Designs welcomes you " + name + "! We're glad you are doing " + mood + "!";
+                document.getElementById('output').innerHTML = output; 
+            }
+            document.getElementById('submit').addEventListener('click', myFunction);
+
+            function resetFunction()
+            {
+                document.getElementById("myForm").reset();
+            }
+        </script>
+        <br>
+        <br>
+        <button type="button" onclick="statement()">Click for a Political Statement</button>
+        <br>
+        <button type="button" id="color_button" onclick="changeColor()">Click me to change color</button>
+        <br>
+        <input onclick="changeText()" type="button" value="Thing 1" id="button4"></input>
+        <br>
+        <h3 id="color_text" onmousedown="mouseDown()" onmouseup="mouseUp()">Click this text!</h3>
+        <script>
+            function statement()
+            {
+                alert("MY CAT IS A COMMUNIST AND THERE'S NOTHING YOU CAN DO ABOUT IT.");
+            }
+            function changeColor()
+            {
+                document.getElementById("color_button").style.backgroundColor = "brown"; 
+            }
+            function changeText()
+            {
+                var buttonChange = document.getElementById("button4");
+                if (buttonChange.value=="Thing 2") buttonChange.value = "Thing 1";
+                else buttonChange.value = "Thing 2";
+            }
+            function mouseDown()
+            {
+                document.getElementById('color_text').style.color = "#029aff";
+
+            }
+            function mouseUp()
+            {
+                document.getElementById('color_text').style.color = "black";
+            }
+        </script>
+    </main>
+    <footer>
+      <br/>
+        <nav>
+            <a href="https://webpages.charlotte.edu/pscott20/" class="nav-link">UNCC Homepage</a>
+            ||
+            <a href="https://github.com/pscott20" class="nav-link">Github</a>
+            ||
+            <a href="https://github.com/pscott20/pscott20.github.io" class="nav-link">Github.io</a>
+            ||
+            <a href="https://www.freecodecamp.org/pscott" class="nav-link">freeCodeCamp</a>
+            ||
+            <a href="https://jsfiddle.net/user/pscott20/fiddles" class="nav-link">JSFiddle</a>
+            ||
+            <a href="https://www.linkedin.com/in/patrick-scott-a11241133/" class="nav-link">Linkedin</a>
+        </nav>
+        <br/>
+        Created by<a href="https://pscott20.github.io/scottdesigns.net/index.html" class="nav-link"> Scott Designs &copy;2022</a>
+        <p>
+        <a href="https://validator.w3.org/check?uri=referer">
+          <img src="images/button_validation_html5.png" alt="HTML5 Validation"/>
+        </a>
+        <a href="https://jigsaw.w3.org/css-validator/check/referer">
+          <img src="images/button_validation_css.png" alt="CSS Validation"/>
+        </a>
+        </p>
+    </footer>
+  </body>
+</html>
