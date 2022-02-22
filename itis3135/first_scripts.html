@@ -6,6 +6,7 @@
     <link rel="icon" href="images/favicon.ico">
     <link href="styles/default.css" type="text/css" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative&display=swap" rel="stylesheet"/>
+    <script src="scripts\defaultscripts.js"></script>
   </head>
   <body>
     <header>
@@ -32,25 +33,36 @@
     </header>
     <main>
         <h3>My First Scripts Page</h3>
+        <!--Button to test JavaScript-->
+        <h3><button type="button" id="testButton" onclick="scriptTest()">Test JavaScript</button></h3>
+
+        <!--Heading 3 to display the time of day-->
         <h3><span id="timeOfDay"></span>
+
+        <!--JavaScript to display the time of day and date.-->
         <script>
             var today = new Date();
             document.write("Today is " + today.toDateString());            
         </script>
         <br>
         <br>
+
+        <!--Form that prompts the user for input-->
         <form id="myForm">
             <label for="name">Enter Name </label>
             <input type="text" id="name"><br><br>
             <label for="mood">Enter Mood </label>
             <input type="text" id="mood"><br>
             <button type="button" onclick="myFunction()">Submit</button>
-            <input type="button" onclick="resetFunction()" value="Reset Form">
+            <input type="button" onclick="resetFunction()" value="Reset Form"><!--This button is to reset the inputs in the forms-->
         </form>
         <br>
         <br>
+
+        <!--Paragraph to output the results of the form.-->
         <p id="output"></p>
         <script>
+            //Function that assigns the inputs to variables then prints them when the submit button is clicked.
             function myFunction()
             {
                 var name = document.getElementById("name").value;
@@ -60,6 +72,7 @@
             }
             document.getElementById('submit').addEventListener('click', myFunction);
 
+            //Function for the reset form button.
             function resetFunction()
             {
                 document.getElementById("myForm").reset();
@@ -67,33 +80,50 @@
         </script>
         <br>
         <br>
+
+        <!--Button to display an alert when it is clicked.-->
         <button type="button" onclick="statement()">Click for a Political Statement</button>
         <br>
+
+        <!--Button that will change background colors when it is clicked.-->
         <button type="button" id="color_button" onclick="changeColor()">Click me to change color</button>
         <br>
+
+        <!--Button that changes it's value when clicked.-->
         <input onclick="changeText()" type="button" value="Thing 1" id="button4"></input>
         <br>
+
+        <!--Text that changes color when it is clicked.-->
         <h3 id="color_text" onmousedown="mouseDown()" onmouseup="mouseUp()">Click this text!</h3>
         <script>
+            //Function that displays an alert message when the button is clicked.
             function statement()
             {
                 alert("MY CAT IS A COMMUNIST AND THERE'S NOTHING YOU CAN DO ABOUT IT.");
             }
+
+            //Function that changes the buttons background color when it clicked.
             function changeColor()
             {
                 document.getElementById("color_button").style.backgroundColor = "brown"; 
             }
+
+            //Function to change the text value of a button when it is clicked.
             function changeText()
             {
                 var buttonChange = document.getElementById("button4");
                 if (buttonChange.value=="Thing 2") buttonChange.value = "Thing 1";
                 else buttonChange.value = "Thing 2";
             }
+
+            //Function that changes the color of text when it is clicked.
             function mouseDown()
             {
                 document.getElementById('color_text').style.color = "#029aff";
 
             }
+            
+            //Function that changes the color of text when it is clicked.
             function mouseUp()
             {
                 document.getElementById('color_text').style.color = "black";
