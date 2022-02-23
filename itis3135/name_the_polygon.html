@@ -29,19 +29,25 @@
         <a href="https://pscott20.github.io/stuff/ALL%20%5ECAPS.htm" class="nav-link">Bad Design</a>
         |
         <a href="https://pscott20.github.io/itis3135/first_scripts.html" class="nav-link">First Scripts</a>
+        |
+        <a href="https://pscott20.github.io/itis3135/name_the_polygon_.html" class="nav-link">Name the Polygon</a>
       </nav>
     </header>
     <main>
         <h2>Name The Polygon</h2>
         <form id="polygon_form">
-            <label for="userPrompt">The Pink Sloth <img src="images/sloth_logo.png" width="50px" height="50px"> wants you to enter a number: </label>
+            <label for="userPrompt">The Pink Sloth <img src="images/sloth_logo.png" width="50px" height="50px"> wants you to enter a number between 1 and 20: </label>
             <input type="number" id="userPrompt"><br><br>
-            <button type="button" onclick="submitButton()">Submit</button>
-            <input type="button" onclick="resetEntry()" value="Reset Form"><!--This button is to reset the inputs in the forms-->
+            <button type="button" id="submitButton" onclick="submitButton()">Submit</button>
+            <input type="reset" id="resetButton" onclick="resetEntry()"><!--This button is to reset the inputs in the forms-->
         </form>
         <br>
         <br>
-        <p id="output"></p><!--Test output. TODO: delete this.-->
+        <p id="output"></p>
+        <br>
+        <br>
+        <p>The work submitted here is my work - I have not copied and pasted code into these pages. I have gotten help from these 
+          sites: w3schools, geeksforgeeks. - Patrick Scott 2/22/2022 @ 2007.</p>
     </main>
     <footer>
       <br/>
