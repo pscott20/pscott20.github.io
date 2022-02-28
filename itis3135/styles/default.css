@@ -126,3 +126,13 @@ a.nav-link:active
    color: #020088;
    text-decoration: none;
 }
+
+.calculator_output
+{
+  border: #020088;
+}
+
+.calculator_keys
+{
+  display: grid;
+}

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Patrick Scott &#8869; ITIS3135 &#8869; Pink Sloth &#8869; Contract</title>
+        <link rel="icon" href="images/favicon.ico">
+        <link href="styles/default.css" type="text/css" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative&display=swap" rel="stylesheet"/>
+        <script src="../scripts/w3.js"></script>
+        <script src="scripts/calculator_fcc_script.js"></script>
+    </head>
+    <body>
+        <header>
+            <div w3-include-html="components/header.html"></div> 
+        </header>
+        <main>
+            <div class="calculator">
+                <div class="calculator_display">0</div>
+                <div class="calculator_keys">
+                    <button class="key--operator" data-action="add">+</button>
+                    <button class="key--operator" data-action="subtract">-</button>
+                    <button class="key--operator" data-action="multiply">&times;</button>
+                    <button class="key--operator" data-action="divide">&divide;</button>
+                    <button>7</button>
+                    <button>8</button>
+                    <button>9</button>
+                    <button>4</button>
+                    <button>5</button>
+                    <button>6</button>
+                    <button>1</button>
+                    <button>2</button>
+                    <button>3</button>
+                    <button>0</button>
+                    <button data-action="decimal">.</button>
+                    <button data-action="clear">AC</button>
+                    <button class="key--equal" data-action="calculate">=</button>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <div w3-include-html="components/footer.html"></div>
+        </footer>
+        <script>
+            w3.includeHTML();
+        </script>
+    </body>
+</html>
