@@ -5,6 +5,8 @@ keys.addEventListener("click", e =>
 {
     if (e.target.matches('button')) {
         //Do something
+        const key = e.target
+        const action = key.dataset.action
     }
 
 })
