@@ -2,6 +2,8 @@ body
 {
   background-color: #677474;
   font-family: Copperplate, Arial, sans-serif;
+  padding: 0;
+  margin: 0;
 }
 
 h1, h2, h3
