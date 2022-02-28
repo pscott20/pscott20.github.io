@@ -6,6 +6,8 @@ body
 {
   background-color: #9d8189;
   font-family: Copperplate, Arial, sans-serif;
+  padding: 0;
+  margin: 0;
 }
 
 h1 
@@ -148,26 +150,20 @@ a.nav-link:active
   font-weight: normal;
 }
 
-body{
-  padding: 0;
-  margin: 0;
-  background: linear-gradient(to right, #FFC300, #FF5733);
-}
-
 .calculator-grid
 {
   display: grid;
   justify-content: center;
   align-content: center;
-  min-height: 100vh;
-  grid-template-columns: repeat(4, 100px);
-  grid-template-rows: minmax(120px, auto) repeat(5, 100px);
+  grid-template-columns: repeat(4, 50px);
+  grid-template-rows: minmax(70px, auto) repeat(5, 50px);
+  margin: 20px; 
 }
 
 .calculator-grid > button
 {
   cursor: pointer;
-  font-size: 2rem;
+  font-size: 1rem;
   border: 1px solid white;
   outline: none;
   background-color: rgba(255, 255, 255, .75);
@@ -199,12 +195,12 @@ body{
 .output .previous-operand
 {
   color: rgba(255, 255, 255, .75);
-  font-size: 1.5rem;
+  font-size: .75rem;
 }
 
 .output .current-operand
 {
   color: white;
-  font-size: 2.5rem;
+  font-size: 1.0rem;
 }
 
