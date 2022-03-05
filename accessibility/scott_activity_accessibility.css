@@ -60,21 +60,16 @@ form {
   display: inline-block;
   color:black;
 }
+#phone_number
+{
+  margin-top: 5px; 
+}
 
 #submit-button
 {
   color: #FFF5EE;
   background-color: #2F4F4F;
-}
-
-
-/* footer bottom of page*/
-footer {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  padding-right: 70px;
- 
+  margin-top: 10px; 
 }
 
 abbr {
@@ -98,4 +93,21 @@ abbr {
   cursor: pointer;
 }
 
+/* footer bottom of page*/
+footer {
+  position: relative;
+  margin-top: 50px; 
+  bottom: 0;
+  right: 0;
+  /*padding-right: 70px;*/
+}
 
+a
+{
+  text-decoration: none;
+}
+
+#validation_link_html, #validation_link_css
+{
+  margin: 5px;
+}
