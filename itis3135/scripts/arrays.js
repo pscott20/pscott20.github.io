@@ -8,9 +8,17 @@ function addSalary()
 
 function displayResults()
 {
+    var sum = 0;
+    //TODO get average salary
+    //How: iterate through the array adding up (?) the values at each index. Then divide them by the number of indexes.
+    for(var i = 0; i < salary.length; i++)
+    {
+        sum += salary[i];
+    }
+
+
     let currentSalary;
     let previousSalary;
-    let i;
     
     for(i = 0; i < salary.length; i++)
     {
@@ -22,10 +30,7 @@ function displayResults()
             return highestSalary;
         }
     }
-    //TODO get average salary
-        //while loop iterating through array
-        //if(current > prev)
-            //add current to variable
+    
     //TODO get highest salary
     //TODO display results (divide them) in the div element with "results" as the id
 }
