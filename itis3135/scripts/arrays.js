@@ -10,25 +10,9 @@ function displayResults()
 {
     var sum = 0;
     //TODO get average salary
-    //How: iterate through the array adding up (?) the values at each index. Then divide them by the number of indexes.
     for(var i = 0; i < salary.length; i++)
     {
         sum += salary[i];
-    }
-
-
-    let currentSalary;
-    let previousSalary;
-    
-    for(i = 0; i < salary.length; i++)
-    {
-        currentSalary = i;
-        previousSalary = i - 1;
-        if (currentSalary > previousSalary)
-        {
-            const highestSalary = currentSalary;
-            return highestSalary;
-        }
     }
     
     //TODO get highest salary
