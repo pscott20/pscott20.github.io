@@ -7,17 +7,36 @@
     <link href="styles/default.css" type="text/css" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative&display=swap" rel="stylesheet"/>
     <script src="../scripts/w3.js"></script>
-    <script src="arrays.js"></script>
+    
   </head>
   <body>
     <header>
       <div w3-include-html="components/header.html"></div>  
     </header>
     <main>
+      <form action="">
+        <label for="employees">Employees: </label>
+        <select name="employees" id="employees">
+          <option value=""></option>
+          <option value="jenny_doe">Jenny Doe</option>
+          <option value="luke_doe">Luke Doe</option>
+          <option value="stumpy doe">Stumpy Doe</option>
+          <option value="john_majors">John Majors</option>
+          <option value="papa_muntz">Papa Muntz</option>
+          <option value="ted_muntz">Ted Muntz</option>
+          <option value="rick_rambis">Rick Rambis</option>
+        </select>
+        <br><br>
+        <input type="submit" id="add-salary" onclick="addSalary()" value="Add Salary"><br>
+        <input type="submit" id="display-results" onclick="displayResults()" value="Display Results"><br>
+        <input type="submit" id="display-salary" onclick="displaySalary()" value="Display Salary">
+      </form>
+      
     </main>
     <footer>
       <div w3-include-html="components/footer.html"></div>
     </footer>
+    <script src="arrays.js"></script> <!--which link is the correct one?-->
     <script>
       w3.includeHTML();
     </script>
