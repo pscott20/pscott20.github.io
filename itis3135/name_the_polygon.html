@@ -6,12 +6,11 @@
     <link rel="icon" href="images/favicon.ico">
     <link href="styles/default.css" type="text/css" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative&display=swap" rel="stylesheet"/>
-    <script src="../scripts/w3.js"></script>
     <script src="scripts/name_the_polygon_script.js"></script>
   </head>
   <body>
     <header>
-      <div w3-include-html="components/header.html"></div> 
+      <div data-include="components/header.html"></div> 
     </header>
     <main>
         <h2>Name The Polygon</h2>
@@ -30,10 +29,8 @@
           sites: w3schools, geeksforgeeks. - Patrick Scott 2/22/2022 @ 2007.</p>
     </main>
     <footer>
-      <div w3-include-html="components/footer.html"></div> 
+      <div data-include="components/footer.html"></div> 
     </footer>
-    <script>
-      w3.includeHTML();
-    </script>
+    <script src="../scripts/include.js"></script>
   </body>
 </html>

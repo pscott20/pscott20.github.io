@@ -6,11 +6,10 @@
     <link rel="icon" href="images/favicon.ico">
     <link href="styles/default.css" type="text/css" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative&display=swap" rel="stylesheet"/>
-    <script src="../scripts/w3.js"></script>
   </head>
   <body>
     <header>
-      <div w3-include-html="components/header.html"></div> 
+      <div data-include="components/header.html"></div> 
     </header>
     <main>
       <h2>HTML Forms</h2>
@@ -50,10 +49,8 @@
       </form> 
     </main>
     <footer>
-      <div w3-include-html="components/footer.html"></div> 
+      <div data-include="components/footer.html"></div> 
     </footer>
-    <script>
-      w3.includeHTML();
-    </script>
+    <script src="../scripts/include.js"></script>
   </body>
 </html>
