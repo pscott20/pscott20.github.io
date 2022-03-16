@@ -12,29 +12,54 @@
       <div data-include="components/header.html"></div>  
     </header>
     <main>
-      <form action="">
         <label for="employees">Employees: </label>
-        <select name="employees" id="employees">
+        <select id="employees">
           <option value=""></option>
-          <option value="jenny_doe">Jenny Doe</option>
-          <option value="luke_doe">Luke Doe</option>
-          <option value="stumpy doe">Stumpy Doe</option>
-          <option value="john_majors">John Majors</option>
-          <option value="papa_muntz">Papa Muntz</option>
-          <option value="ted_muntz">Ted Muntz</option>
-          <option value="rick_rambis">Rick Rambis</option>
+          <option value="Rick Rambis">Rick Rambis</option>
+          <option value="Jenny Doe">Jenny Doe</option>
+          <option value="Luke Doe">Luke Doe</option>
+          <option value="Stumpy Doe">Stumpy Doe</option>
+          <option value="John Majors">John Majors</option>
+          <option value="Papa Muntz">Papa Muntz</option>
+          <option value="Ted Muntz">Ted Muntz</option>
         </select>
+        <br>
+        <br>
+        <form id="enter-employee-salary">
+          <label for="enterNewEmployee">Enter New Employee: </label>
+          <input type="text" id="enterNewEmployee">
+          <br>
+          <label for="enterSalary">Enter Their Salary: </label>
+          <input type="number" id="enterSalary">
+          <br>
+          <input type="submit" id="add-salary" onclick="addSalary()" value="Add Salary"><br>
+        </form>
         <br><br>
-        <input type="submit" id="add-salary" onclick="addSalary()" value="Add Salary"><br>
-        <input type="submit" id="display-results" onclick="displayResults()" value="Display Results"><br>
+        <input type="submit" id="display-results" onclick="displayResults(); this.onclick=null;" value="Display Results">
+        <br>
+        <h2>Highest Salary</h2>
+        <br>
+        <p id="highest_salary"></p>
+        <br><br>
+        <h2>Average Salary</h2>
+        <br>
+        <p id="average_salary"></p>
+        <br>
+        <br>
         <input type="submit" id="display-salary" onclick="displaySalary()" value="Display Salary">
-      </form>
-      <div id="results">
-        <h2>Results</h2>
-        <p id="highest_salary">Highest Salary</p>
-        <p id="average_salary">Average Salary</p>
-      </div>
-
+        <br>
+        <br>
+        <table id="results_table">
+          <tr>
+            <th>
+              Name
+            </th>
+            <th>
+              Salary
+            </th>
+          </tr>
+        </table>
+        <button onClick="window.location.reload();">Reset Table</button>
     </main>
     <footer>
       <div data-include="components/footer.html"></div>

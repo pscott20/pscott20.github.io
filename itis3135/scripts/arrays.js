@@ -1,16 +1,46 @@
 const person = ["Rick Rambus", "Jenny Doe", "Stumpy Doe", "Luke Doe", "John Majors", "Papa Muntz", "Ted Muntz"];
 const salary = [3100, 2900, 2500, 2000, 20000, 9000, 5000];
 
-const resultsButton = document.getElementById("display-results") //testing
-        resultsButton.addEventListener('click', displayResults) //testing
+//Move cursor to name input
+const input = document.getElementById('enterNewEmployee');
+input.setSelectionRange(0,0);
+input.focus();
 
 function addSalary()
 {
-    //TODO
+    event.preventDefault(); //Stops the auto event (resetting the page) from happening
+    let enterNewEmployee = document.getElementById("enterNewEmployee").value; 
+    let enteredSalary = parseInt(document.getElementById("enterSalary").value); //Creates a variable with the number entered in the salary form
+    if (enterNewEmployee.length != 0)
+    {
+        if (isNaN(enteredSalary))
+        {
+            alert("Error, no number entered");
+        } 
+            else
+            {
+                person.push(enterNewEmployee);
+                salary.push(enteredSalary);
+            }
+    } 
+        else 
+        {
+            alert("Error, no employee entered");
+        }
+
+    for (var i = 0; i < person.length; i++)
+    {
+        console.log(person[i]);   
+    }
+    for (var i = 0; i < salary.length; i++)
+    {
+        console.log(salary[i]);   
+    }
 }
 
 function displayResults()
 {
+    event.preventDefault();
     var sum = 0;
     var averageSalary;
 
@@ -19,6 +49,8 @@ function displayResults()
     {
         sum += salary[i];
         averageSalary = sum / salary.length;
+        averageSalary = Math.round(averageSalary * 100) / 100; //Equation to round results to 2 decimal places.
+        outputAverageSalary = "$"+averageSalary;
     }
     
     //Derive the highest salary of array
@@ -29,30 +61,22 @@ function displayResults()
         if (currentSalary > previousSalary)
         {
             highestSalary = currentSalary;
+            outputHighestSalary = "$" + highestSalary;
         }
     }
 
-    //highest_salary.innerHTML = "Test"; 
-
-    //TODO display results (divide them) in the div element with "results" as the id
-    //add nodes to the DOM with the heading as an h2 element and the average and highest as <p> elements. 
-    //The easiest way to do that is to use the innerHTML property as shown in figure 6-13 in your Murach’s book.
-    
-    //Event listener syntax (freeCodeCamp)
-    //element.addEventListener(event, function, booleanValue);
-
-    //element.addEventListener("click", function(){id.style.background = "Changes"});
-    //element.onClick = function(){id.style.background = "Changes"}); 
-
-    //resultsButton.addEventListener('click', function master(){ //testing
-        //var master = document.getElementsByClassName("master2"); //testing
-        //master[2].innerHTML = 'i need a job'; //testing
-    //}) //testing
-    console.log(highestSalary);
+    document.getElementById("highest_salary").innerHTML = outputHighestSalary;
+    document.getElementById("average_salary").innerHTML = outputAverageSalary;
 }
 
 function displaySalary()
 {
-    //TODO
+    for (var i = 0; i < person.length; i++)
+    {
+        html = "<table><tr><td>" + person[i] + "</td><td>" + salary[i] + "</td></tr></table>";
+        document.getElementById("results_table").innerHTML += html;
+    }     
 }
+
+ 
 

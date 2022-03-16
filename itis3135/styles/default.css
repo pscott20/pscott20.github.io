@@ -236,3 +236,8 @@ a.nav-link:active
   color: white;
   font-size: 1.0rem;
 }
+
+#enter-employee-salary, #display-results 
+{
+  padding-left: 5px;
+}
