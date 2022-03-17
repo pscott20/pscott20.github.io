@@ -241,3 +241,54 @@ a.nav-link:active
 {
   padding-left: 5px;
 }
+
+/* Dropdown Button */
+.calculators-dropdown-btn {
+  background-color: transparent;
+  border: none;
+  color: #020088;
+  font-size: 105%;
+}
+
+/* Dropdown button on hover & focus */
+.calculators-dropdown-btn:hover .calculators-dropdown-btn:focus {
+  background-color: transparent;
+  font-size: 90%;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.calculators-dropdown 
+{
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.calculators-dropdown-content 
+{
+  display: none;
+  position: absolute;
+  background-color: #a06c7a;
+  min-width: 130px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+.calculators-dropdown-content:hover
+{
+  font-size: 97%;
+  min-width: 130px;
+}
+
+/* Links inside the dropdown */
+.calculators-dropdown-content a {
+  color: #020088;
+  padding: 1px 4px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #ddd}
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show {display:block;}

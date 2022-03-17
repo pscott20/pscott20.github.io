@@ -1,3 +1,5 @@
+
+<link href="/itis3135/styles/default.css" type="text/css" rel="stylesheet"/>
 <header>
     <h1>Patrick Scott | ITIS3135 | Pink Sloth</h1>
     <nav>
@@ -21,10 +23,15 @@
         |
         <a href="name_the_polygon.html" class="nav-link">Name the Polygon</a>
         |
-        <a href="calculator_try.html" class="nav-link">Calculator Attempt</a>
-        |
-        <a href="calculator_fcc.html" class="nav-link">Calculator</a>
+        <div class="calculators-dropdown">
+            <button onclick="dropdownFunction()" class="calculators-dropdown-btn">Calculators &#8964;</button>
+            <div id="calculators-dropdown-options" class="calculators-dropdown-content">
+                <a href="calculator_try.html" id="calculator-attempt">Calculator Attempt</a>
+                <a href="calculator_fcc.html" id="calculator-tutorial">Calculator</a>
+            </div>
+        </div>
         |
         <a href="arrays.html" class="nav-link">Arrays</a>
     </nav>
 </header>
+<script src="/itis3135/scripts/default_scripts.js"></script>
