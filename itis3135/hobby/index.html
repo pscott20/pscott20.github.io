@@ -8,9 +8,10 @@
     <style>
       body
       {
-        background-color: rgb(5, 172, 116);
+        background-color: rgb(18, 122, 4);
         font-family: monospace;
       }
+
       .dgpt_map
       {
         width: 1500px;
@@ -39,305 +40,345 @@
       {
         padding-left: 10px;
       }
+
+      /*Nav bar*/
+      #navbar
+      {
+        overflow: hidden;
+        background-color: #000;
+      }
+
+      #navbar a
+      {
+        float: left;
+        display: block;
+        color:rgb(255, 255, 255);
+        text-align: center;
+        padding: 14px;
+        text-decoration: none;
+      }
+
+      .content
+      {
+        padding: 16px;
+      }
+
+      .sticky
+      {
+        position: fixed;
+        top: 0;
+      }
+
+      .sticky + .content
+      {
+        padding-top: 60px;
+      }
     </style>
   </head>
   <body>
       <header>
-        <!--TODO: add link to each section-->
+        <div class="header">
+          <h1>Disc Golf</h1>
+        </div>
+        <div id="navbar">
+          <a href="">Home</a>
+          <a href ="#introduction">Introduction</a>
+          <a href="#discs">What is a disc?</a>
+          <a href="#local_events">Local Events</a>
+          <a href = "#courses_in_charlotte">Courses In Charlotte</a>
+          <a href="#professional_tour">The Professional Tour</a>
+        </div>
       </header>
       <main>
-        <h1>
-          Disc Golf
-        </h1>
-        <section>
-          <!--Page 1: Intro-->
-          <!--h3 3 things (paras, pics, tables, forms, slideshow)-->
-          <!--3 things: paragraph, picture 1, scorecard, terms for score-->
-          <h2>
-            Introduction
-          </h2>
-          <h3>
-            Disc Golf is a hobby in which players throw a disc at a target in the fewest amount of attempts possible. The rules are closely related to golf.
-            Courses are most often free and can be found in public parks, and are typically 9 or 18 holes long. However, there are some private pay to play courses. A "hole" is completed by 
-            throwing a disc from a tee pad (or designated area) toward a target, referred to as a basket (Figure 1). Subsequent throws are from where the disc lands on the course. 
-            A hole is completed when the disc comes to rest in the basket, whether it is caught by the chains or not. The goal is to complete the hole in the fewest number of shots. 
-          </h3>
-          <img src="images/dg_basket.png">
-          <h3>
-            The table below is an example of a scorecard.
-          </h3>
-          <table id="scorecard">
-            <tr>
-              <th>Hole</th>
-              <th>1</th>
-              <th>2</th>
-              <th>3</th>
-              <th>4</th>
-              <th>5</th>
-              <th>6</th>
-              <th>7</th>
-              <th>8</th>
-              <th>9</th>
-              <th>Totals</th>
-            </tr>
-            <tr>
-              <th>Distance (Feet)</th>
-              <td>261</td>
-              <td>618</td>
-              <td>570</td>
-              <td>301</td>
-              <td>292</td>
-              <td>270</td>
-              <td>280</td>
-              <td>230</td>
-              <td>265</td>
-            </tr>
-            <tr>
-              <th>Par</th>
-              <td>3</td>
-              <td>4</td>
-              <td>4</td>
-              <td>3</td>
-              <td>3</td>
-              <td>3</td>
-              <td>3</td>
-              <td>3</td>
-              <td>3</td>
-            </tr>
-            <tr>
-              <th>Score</th>
-              <td>3</td>
-              <td>4</td>
-              <td>5</td>
-              <td>4</td>
-              <td>6</td>
-              <td>3</td>
-              <td>3</td>
-              <td>4</td>
-              <td>3</td>
-            </tr>
-            <tr>
-              <th>Hole</th>
-              <th>10</th>
-              <th>11</th>
-              <th>12</th>
-              <th>13</th>
-              <th>14</th>
-              <th>15</th>
-              <th>16</th>
-              <th>17</th>
-              <th>18</th>
-              
-            </tr>
-            <tr>
-              <th>Distance (Feet)</th>
-              <td>262</td>
-              <td>235</td>
-              <td>275</td>
-              <td>335</td>
-              <td>291</td>
-              <td>331</td>
-              <td>285</td>
-              <td>536</td>
-              <td>700</td>
-            </tr>
-            <tr>
-              <th>Par</th>
-              <td>3</td>
-              <td>3</td>
-              <td>3</td>
-              <td>3</td>
-              <td>3</td>
-              <td>3</td>
-              <td>3</td>
-              <td>4</td>
-              <td>5</td>
-              <td>59</td>
-            </tr>
-            <tr>
-              <th>Score</th>
-              <td>2</td>
-              <td>4</td>
-              <td>3</td>
-              <td>3</td>
-              <td>5</td>
-              <td>3</td>
-              <td>4</td>
-              <td>4</td>
-              <td>7</td>
-              <td>70</td>
-            </tr>
-          </table>
-          <h3>The Common Terms for Scores on a Hole</h3>
-          <ul>
-            <li>A Par means shooting the predetermined average score</li>
-            <li>An Ace is a hole in one regardless of par</li>
-            <li>An Albatross is three under the hole's par</li>
-            <li>An Eagle is two under par</li>
-            <li>A Birdie is one under</li>
-            <li>A Bogey is one over</li>
-            <li>A Double Bogey is two over</li>
-            <li>A Triple Bogey is three over</li>
-            <li>A Quadruple Bogey is four over</li>
-            <li>Anything above quadruple bogey is referred to as "+X"</li>
-          </ul>
-        </section>
-        <section>
-          <!--3 things: picture 1, pictures and descriptions (in bubbles?) of discs, their flights-->
-          <h2>
-            Types of Discs
-          </h2>
-          <img src="images/dg_bag(transparent)(smaller).png">
-          <p>The majority of discs are made out of polypropene plastic and weigh around 170 grams.<br><br>
-          Discs are generally categorized into 3 different types:</p>
-          <ul>
-            <li>Driver</li>
-            <img src="#">
-            <li>Midrage</li>
-            <img src="#">
-            <li>Putter</li>
-            <img src="#">
-          </ul>
-          <h4>Why is it called a disc instead of a frisbee?</h4>
-          <h5>Below is a table describing the different features</h5>
-          <h6>In general discs are smaller in diameter, thinner in profile, and more dense in material</h6>
-          <table>
-            <tr>
-              <th></th>
-              <th>DISC</th>
-              <th>Frisbee</th>
-            </tr>
-            <tr>
-              <td>Average Diameter</td>
-              <td>8.3"</td>
-              <td>10.75"</td>
-            </tr>
-            <tr>
-              <td>Shape</td>
-              <td><img src="images/disc_profile.png"></td>
-              <td><img src="images/frisbee_profile.png"></td>
-            </tr>
-            <tr>
-              <td>Designed To</td>
-              <td>Land at a specific distance with a specific flight</td>
-              <td>Be caught by another player</td>
-            </tr>
-        </section>
-        <section>
-          <!--h2 name-->
-          <h2>
-            Local Events
-          </h2>
-          <p>
-            Page 3: Local Events
-            <!--3 things: paragraph explaining what they are, calendar of league events, table (or something) or tournaments-->
-          </p>
-        </section>
-        <section>
-          <!--3 things: paragraph, map, slideshow-->
-          <h2>
-            The Professional Tour
-          </h2>
-          <p>
-            Page 4: Professional circuit
-            <!--paragraph of tour-->
-              <!--include payouts and salaries-->
-            <div class="dgpt_map"></div>
-            <!--slide show of where to watch-->
-          </p>
-        </section>
-        <section>
-          <!--3 things: Udisc pic, table, collage of my pictures-->
-          <h2>
-            Courses in Charlotte
-          </h2>
-          <img src="images/local_disc_golf_hole.png">
+        <div class="content">
+          <section id="introduction">
+            <!--h3 3 things (paras, pics, tables, forms, slideshow)-->
+            <!--3 things: paragraph, picture 1, scorecard, terms for score-->
+            <h2>
+              Introduction
+            </h2>
+            <h3>
+              Disc Golf is a hobby in which players throw a disc at a target in the fewest amount of attempts possible. The rules are closely related to golf.
+              Courses are most often free and can be found in public parks, and are typically 9 or 18 holes long. However, there are some private pay to play courses. A "hole" is completed by 
+              throwing a disc from a tee pad (or designated area) toward a target, referred to as a basket (Figure 1). Subsequent throws are from where the disc lands on the course. 
+              A hole is completed when the disc comes to rest in the basket, whether it is caught by the chains or not. The goal is to complete the hole in the fewest number of shots. 
+            </h3>
+            <img src="images/dg_basket.png">
+            <h3>
+              The table below is an example of a scorecard.
+            </h3>
+            <table id="scorecard">
+              <tr>
+                <th>Hole</th>
+                <th>1</th>
+                <th>2</th>
+                <th>3</th>
+                <th>4</th>
+                <th>5</th>
+                <th>6</th>
+                <th>7</th>
+                <th>8</th>
+                <th>9</th>
+                <th>Totals</th>
+              </tr>
+              <tr>
+                <th>Distance (Feet)</th>
+                <td>261</td>
+                <td>618</td>
+                <td>570</td>
+                <td>301</td>
+                <td>292</td>
+                <td>270</td>
+                <td>280</td>
+                <td>230</td>
+                <td>265</td>
+              </tr>
+              <tr>
+                <th>Par</th>
+                <td>3</td>
+                <td>4</td>
+                <td>4</td>
+                <td>3</td>
+                <td>3</td>
+                <td>3</td>
+                <td>3</td>
+                <td>3</td>
+                <td>3</td>
+              </tr>
+              <tr>
+                <th>Score</th>
+                <td>3</td>
+                <td>4</td>
+                <td>5</td>
+                <td>4</td>
+                <td>6</td>
+                <td>3</td>
+                <td>3</td>
+                <td>4</td>
+                <td>3</td>
+              </tr>
+              <tr>
+                <th>Hole</th>
+                <th>10</th>
+                <th>11</th>
+                <th>12</th>
+                <th>13</th>
+                <th>14</th>
+                <th>15</th>
+                <th>16</th>
+                <th>17</th>
+                <th>18</th>
+              </tr>
+              <tr>
+                <th>Distance (Feet)</th>
+                <td>262</td>
+                <td>235</td>
+                <td>275</td>
+                <td>335</td>
+                <td>291</td>
+                <td>331</td>
+                <td>285</td>
+                <td>536</td>
+                <td>700</td>
+              </tr>
+              <tr>
+                <th>Par</th>
+                <td>3</td>
+                <td>3</td>
+                <td>3</td>
+                <td>3</td>
+                <td>3</td>
+                <td>3</td>
+                <td>3</td>
+                <td>4</td>
+                <td>5</td>
+                <td>59</td>
+              </tr>
+              <tr>
+                <th>Score</th>
+                <td>2</td>
+                <td>4</td>
+                <td>3</td>
+                <td>3</td>
+                <td>5</td>
+                <td>3</td>
+                <td>4</td>
+                <td>4</td>
+                <td>7</td>
+                <td>70</td>
+              </tr>
+            </table>
+            <h3>The Common Terms for Scores on a Hole</h3>
+            <ul>
+              <li>A Par means shooting the predetermined average score</li>
+              <li>An Ace is a hole in one regardless of par</li>
+              <li>An Albatross is three under the hole's par</li>
+              <li>An Eagle is two under par</li>
+              <li>A Birdie is one under</li>
+              <li>A Bogey is one over</li>
+              <li>A Double Bogey is two over</li>
+              <li>A Triple Bogey is three over</li>
+              <li>A Quadruple Bogey is four over</li>
+              <li>Anything above quadruple bogey is referred to as "+X"</li>
+            </ul>
+          </section>
+          <section id="discs">
+            <!--3 things: picture 1, pictures and descriptions (in bubbles?) of discs, their flights-->
+            <h2>
+              What is a Disc?
+            </h2>
+            <img src="images/dg_bag(transparent)(smaller).png">
+            <p>The majority of discs are made out of polypropene plastic and weigh around 170 grams.<br><br>
+            Discs are generally categorized into 3 different types:</p>
+            <ul>
+              <li>Driver</li>
+              <img src="#">
+              <li>Midrage</li>
+              <img src="#">
+              <li>Putter</li>
+              <img src="#">
+            </ul>
+            <h4>Why is it called a disc instead of a frisbee?</h4>
+            <h5>Below is a table describing the different features</h5>
+            <h6>In general discs are smaller in diameter, thinner in profile, and more dense in material</h6>
+            <table>
+              <tr>
+                <th></th>
+                <th>Disc</th>
+                <th>Frisbee</th>
+              </tr>
+              <tr>
+                <td>Average Diameter</td>
+                <td>8.3"</td>
+                <td>10.75"</td>
+              </tr>
+              <tr>
+                <td>Shape</td>
+                <td><img src="images/disc_profile.png"></td>
+                <td><img src="images/frisbee_profile.png"></td>
+              </tr>
+              <tr>
+                <td>Designed To</td>
+                <td>Land at a specific distance with a specific flight</td>
+                <td>Be caught by another player</td>
+              </tr>
+          </section>
+          <section id="local_events">
+            <!--h2 name-->
+            <h2>
+              Local Events
+            </h2>
+            <p>
+              Page 3: Local Events
+              <!--3 things: paragraph explaining what they are, calendar of league events, table (or something) or tournaments-->
+            </p>
+          </section>
+          <section id="courses_in_charlotte">
+            <!--3 things: Udisc pic, table, collage of my pictures-->
+            <h2>
+              Courses in Charlotte
+            </h2>
+            <img src="images/local_disc_golf_hole.png">
 
-          <img src="images/udisc_map.png">
-          <h3>Top 18 Hole Courses in and around Charlotte</h3>
-          <table>
-            <tr>
-              <th>Course Name</th>
-              <th>Rating on UDisc</th>
-            </tr>
-            <tr>
-              <td>Eastway Park</td>
-              <td class="green_score">4.6</td>
-            </tr>
-            <tr>
-              <td>Hornets Nest Park</td>
-              <td class="green_score">4.6</td>
-            </tr>
-            <tr>
-              <td>Camp Canaan - Riverbend</td>
-              <td class="green_score">4.6</td>
-            </tr>
-            <tr>
-              <td>Reedy Creek</td>
-              <td class="yellow_score">4.5</td>
-            </tr>
-            <tr>
-              <td>Nevin</td>
-              <td class="yellow_score">4.5</td>
-            </tr>
-            <tr>
-              <td>The Scrapyard</td>
-              <td class="yellow_score">4.5</td>
-            </tr>
-            <tr>
-              <td>Winthrop University</td>
-              <td class="yellow_score">4.5</td>
-            </tr>
-            <tr>
-              <td>Kilborne TPC</td>
-              <td class="yellow_score">4.5</td>
-            </tr>
-            <tr>
-              <td>Torma Town</td>
-              <td class="yellow_score">4.4</td>
-            </tr>
-            <tr>
-              <td>Angry Beaver</td>
-              <td class="yellow_score">4.3</td>
-            </tr>
-            <tr>
-              <td>Plantation Ruins at Winget</td>
-              <td class="yellow_score">4.3</td>
-            </tr>
-            <tr>
-              <td>Renaissance Park - Gold</td>
-              <td class="yellow_score">4.3</td>
-            </tr>
-            <tr>
-              <td>Dry Creek at SPCC</td>
-              <td class="yellow_score">4.3</td>
-            </tr>
-            <tr>
-              <td>Renaissance PArk DGC - RenSke</td>
-              <td class="red_score">4.2</td>
-            </tr>
-            <tr>
-              <td>Bradley Center</td>
-              <td class="red_score">4.2</td>
-            </tr>
-            <tr>
-              <td>Frank Like Park</td>
-              <td class="red_score">4.1</td>
-            </tr>
-            <tr>
-              <td>Cane Creek Park</td>
-              <td class="red_score">4.1</td>
-            </tr>
-            <tr>
-              <td>Sugaw Creek Park DGC</td>
-              <td class="red_score">4.0</td>
-            </tr>
-            <tr>
-              <td>Boyd Hill</td>
-              <td class="red_score">4.0</td>
-            </tr>
-          </table>
-        </section>
+            <img src="images/udisc_map.png">
+            <h3>Top 18 Hole Courses in and around Charlotte</h3>
+            <table>
+              <tr>
+                <th>Course Name</th>
+                <th>Rating on UDisc</th>
+              </tr>
+              <tr>
+                <td>Eastway Park</td>
+                <td class="green_score">4.6</td>
+              </tr>
+              <tr>
+                <td>Hornets Nest Park</td>
+                <td class="green_score">4.6</td>
+              </tr>
+              <tr>
+                <td>Camp Canaan - Riverbend</td>
+                <td class="green_score">4.6</td>
+              </tr>
+              <tr>
+                <td>Reedy Creek</td>
+                <td class="yellow_score">4.5</td>
+              </tr>
+              <tr>
+                <td>Nevin</td>
+                <td class="yellow_score">4.5</td>
+              </tr>
+              <tr>
+                <td>The Scrapyard</td>
+                <td class="yellow_score">4.5</td>
+              </tr>
+              <tr>
+                <td>Winthrop University</td>
+                <td class="yellow_score">4.5</td>
+              </tr>
+              <tr>
+                <td>Kilborne TPC</td>
+                <td class="yellow_score">4.5</td>
+              </tr>
+              <tr>
+                <td>Torma Town</td>
+                <td class="yellow_score">4.4</td>
+              </tr>
+              <tr>
+                <td>Angry Beaver</td>
+                <td class="yellow_score">4.3</td>
+              </tr>
+              <tr>
+                <td>Plantation Ruins at Winget</td>
+                <td class="yellow_score">4.3</td>
+              </tr>
+              <tr>
+                <td>Renaissance Park - Gold</td>
+                <td class="yellow_score">4.3</td>
+              </tr>
+              <tr>
+                <td>Dry Creek at SPCC</td>
+                <td class="yellow_score">4.3</td>
+              </tr>
+              <tr>
+                <td>Renaissance PArk DGC - RenSke</td>
+                <td class="red_score">4.2</td>
+              </tr>
+              <tr>
+                <td>Bradley Center</td>
+                <td class="red_score">4.2</td>
+              </tr>
+              <tr>
+                <td>Frank Like Park</td>
+                <td class="red_score">4.1</td>
+              </tr>
+              <tr>
+                <td>Cane Creek Park</td>
+                <td class="red_score">4.1</td>
+              </tr>
+              <tr>
+                <td>Sugaw Creek Park DGC</td>
+                <td class="red_score">4.0</td>
+              </tr>
+              <tr>
+                <td>Boyd Hill</td>
+                <td class="red_score">4.0</td>
+              </tr>
+            </table>
+          </section>
+          <section id="professional_tour">
+            <!--3 things: paragraph, map, slideshow-->
+            <h2>
+              The Professional Tour
+            </h2>
+            <p>
+              Page 4: Professional circuit
+              <!--paragraph of tour-->
+                <!--include payouts and salaries-->
+              <div class="dgpt_map"></div>
+              <!--slide show of where to watch-->
+            </p>
+          </section>
+        </div>
       </main>
       <footer>
         <p>Created by<a href="https://pscott20.github.io/scottdesigns.net/index.html" class="nav_link_design"> Scott Designs &copy;2022</a></p>
@@ -353,6 +394,24 @@
         document.getElementById("validation_link_html").setAttribute("href", "https://validator.w3.org/check?uri=" + location.href);
         document.getElementById("validation_link_css").setAttribute("href", "https://jigsaw.w3.org/css-validator/validator?uri=" + location.href);
 
+        //Sticky Navbar
+        // When the user scrolls the page, execute myFunction
+        window.onscroll = function() {myFunction()};
+        // Get the navbar
+        var navbar = document.getElementById("navbar");
+        // Get the offset position of the navbar
+        var sticky = navbar.offsetTop;
+        // Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
+        function myFunction() 
+        {
+          if (window.pageYOffset >= sticky) 
+          {
+            navbar.classList.add("sticky")
+          } else 
+          {
+            navbar.classList.remove("sticky");
+          }
+        }
       </script>
   </body>
 </html>
