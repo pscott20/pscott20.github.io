@@ -58,7 +58,7 @@ h2, h3
   text-align: center;
 }
 
-.center
+figure table
 {
   display: block;
   margin-left: auto;
@@ -68,14 +68,16 @@ h2, h3
 
 figcaption
 {
-  font-size: x-small;
+  position: relative;
+  font-size: small;
   font-style: italic;
   text-align: center;
+  max-width: fit-content;
 }
 
 figcaption.table-caption
 {
-  font-size: x-small;
+  font-size: small;
   font-style: italic;
 }
 
