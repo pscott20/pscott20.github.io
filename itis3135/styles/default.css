@@ -245,15 +245,17 @@ a.nav-link:active
 }
 
 /* Dropdown Button */
-.calculators-dropdown-btn {
+#calculators-dropdown-btn 
+{
   background-color: transparent;
   border: none;
-  color: #020088;
+  color: white;
   font-size: 105%;
 }
 
 /* Dropdown button on hover & focus */
-.calculators-dropdown-btn:hover .calculators-dropdown-btn:focus {
+#calculators-dropdown-btn:hover #calculators-dropdown-btn:focus 
+{
   background-color: transparent;
   font-size: 90%;
 }
@@ -282,7 +284,8 @@ a.nav-link:active
 }
 
 /* Links inside the dropdown */
-.calculators-dropdown-content a {
+.calculators-dropdown-content a 
+{
   color: #020088;
   padding: 1px 4px;
   text-decoration: none;
@@ -296,31 +299,30 @@ a.nav-link:active
 .show {display:block;}
 
 /*Nav bar*/
-.navbar ul
+.header_navbar ul
 {
   list-style-type: none;
-  margin-top: 5px;
-  width: 150px;
-  right: 1%;
-  padding: 0;
+  background-color: #a06c7a;
   overflow: hidden;
-  background-color: #333;
-  position: fixed;
-  top: 0;
-  opacity: 90%;
-  border-radius: 5px;
+  margin: 0;
 }
 
-.navbar li a
+.header_navbar li
+{
+  float: left;
+  color: white;
+  margin: 0;
+}
+
+.header_navbar li a
 {
   display: block;
   color: white;
-  text-align: center;
-  padding: 10px;
   text-decoration: none;
+  padding: 5px;
 }
 
-.navbar li a:hover
+.header_navbar li a:hover
 {
-  background-color: rgb(0, 0, 0);
+  background-color: #7a535e;
 }
