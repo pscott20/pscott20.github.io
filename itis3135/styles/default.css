@@ -294,3 +294,33 @@ a.nav-link:active
 
 /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
 .show {display:block;}
+
+/*Nav bar*/
+.navbar ul
+{
+  list-style-type: none;
+  margin-top: 5px;
+  width: 150px;
+  right: 1%;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+  position: fixed;
+  top: 0;
+  opacity: 90%;
+  border-radius: 5px;
+}
+
+.navbar li a
+{
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  text-decoration: none;
+}
+
+.navbar li a:hover
+{
+  background-color: rgb(0, 0, 0);
+}
