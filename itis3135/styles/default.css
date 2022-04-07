@@ -23,7 +23,6 @@ header
 {
   text-align: center;
   background-color: #a06c7a;
-  position: top;
   margin-top: -22px;
   width: 100%;
   padding-bottom: 10px;
@@ -34,7 +33,6 @@ footer
 {
   text-align: center;
   background-color: #a06c7a;
-  position: bottom;
   bottom: 0px;
   margin: 0px;
   width: 100%;
