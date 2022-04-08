@@ -322,9 +322,7 @@
                 <tr>
               </tr>
             </table>
-            <p>
-              <!--3 things: paragraph explaining what they are, calendar of league events, table (or something) or tournaments-->
-            </p>
+            <div id="tournaments"></div>
           </section>
           <hr>
           <section id="courses_in_charlotte">
@@ -447,6 +445,12 @@
         </p>
       </footer>
       <script>
+        $(function(){
+        var contentURI= 'https://www.discgolfscene.com/tournaments/options;distance=50;zip=28226;country=USA';
+          $('#tournaments').load('default.php?url='+ contentURI);
+        });
+
+
         document.getElementById("validation_link_html").setAttribute("href", "https://validator.w3.org/check?uri=" + location.href);
         document.getElementById("validation_link_css").setAttribute("href", "https://jigsaw.w3.org/css-validator/validator?uri=" + location.href);
     </script>
