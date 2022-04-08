@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <title>Disc Golf</title>
     <link rel="icon" href="images/favicon-32x32.png">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.15/jquery.bxslider.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.15/jquery.bxslider.min.css" rel="stylesheet" />
+
     <style>
       body
       {
@@ -295,7 +298,7 @@
                 <td>Wednesday</td>
                 <td>Rennaissance Park</td>
                 <td>Primal Brewing</td>
-                <td>Brackets Bluff Park</td>
+                <td>Brackets Bluff Course</td>
               </tr>
               <tr>
                 <td>Thursday</td>
@@ -313,16 +316,14 @@
                 <td>Winget Park</td>
               </tr>
             </table>
-            <h3>Upcoming Tournaments in and around Charlotte</h3>
-            <table>
-              <tr>
-                <th>
-                  
-                </th>
-                <tr>
-              </tr>
-            </table>
-            <div id="tournaments"></div>
+            <h3>Parks</h3>
+            <ul class="parks_images">
+              <li><img src="images/bailey_park_map.png"></li>
+              <li><img src="images/renaissance_map.png"></li>
+              <li><img src="images/sugaw_map.png"></li>
+              <li><img src="images/kilborne_map.png"></li>
+              <li><img src="images/winget_map.png"></li>
+            </ul>          
           </section>
           <hr>
           <section id="courses_in_charlotte">
@@ -445,12 +446,12 @@
         </p>
       </footer>
       <script>
-        $(function(){
-        var contentURI= 'https://www.discgolfscene.com/tournaments/options;distance=50;zip=28226;country=USA';
-          $('#tournaments').load('default.php?url='+ contentURI);
+        //bxSlider used on Local Courses page
+        $(document).ready(function(){
+          $('.parks_images').bxSlider({
+            adaptiveHeight: true
+          });
         });
-
-
         document.getElementById("validation_link_html").setAttribute("href", "https://validator.w3.org/check?uri=" + location.href);
         document.getElementById("validation_link_css").setAttribute("href", "https://jigsaw.w3.org/css-validator/validator?uri=" + location.href);
     </script>
