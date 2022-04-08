@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <title>Disc Golf</title>
     <link rel="icon" href="images/favicon-32x32.png">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.15/jquery.bxslider.min.js"></script>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.15/jquery.bxslider.min.css" rel="stylesheet" />
-
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
     <style>
       body
       {
@@ -83,6 +83,11 @@
       .navbar li a:hover
       {
         background-color: rgb(0, 0, 0);
+      }
+
+      .parks_images li
+      {
+        margin-top: -10px;
       }
     </style>
   </head>
@@ -449,11 +454,13 @@
         //bxSlider used on Local Courses page
         $(document).ready(function(){
           $('.parks_images').bxSlider({
-            adaptiveHeight: true
+            adaptiveHeight: true,
+            slideWidth: 250,
+            captions: true
           });
         });
         document.getElementById("validation_link_html").setAttribute("href", "https://validator.w3.org/check?uri=" + location.href);
         document.getElementById("validation_link_css").setAttribute("href", "https://jigsaw.w3.org/css-validator/validator?uri=" + location.href);
-    </script>
+      </script>
   </body>
 </html>
