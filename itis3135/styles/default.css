@@ -324,3 +324,8 @@ a.nav-link:active
 {
   background-color: #7a535e;
 }
+
+.peer-review-list li
+{
+  padding: 3px;
+}
