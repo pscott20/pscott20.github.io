@@ -12,7 +12,8 @@
       body
       {
         background-color: #F7BFB4;
-        /*font-family: monospace;*/
+        max-width: 100%;
+        overflow-x: hidden;
       }
 
       /*Nav bar*/
@@ -74,6 +75,78 @@
         color: black;
       }
 
+      .introduction-container
+      {
+        display: flex;
+        flex-wrap: wrap;
+      }      
+
+      .introduction-container > p
+      {
+        margin-top: -10px;
+      }
+
+      .introduction-container h3
+      {
+        background-color: #6D454C;
+        font-size: larger;
+        color: white;
+        border-radius: 15px;
+        text-align: center;
+      }
+
+      .introduction-container ul
+      {
+        font-size: large;
+        margin-top: -10px;
+        padding-left: 25px;
+        padding-right: 15px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+      }
+
+      #scorecard
+      {
+       background-color: #878E88;
+      }
+
+      #scorecard th, td
+      {
+        border-top: 1px solid black;
+        text-align: center;
+        padding: 4px;
+      }
+
+      #discs-container
+      {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 1%;
+      }
+
+      #discs-container > div
+      {
+        width: 346px;
+      }
+      
+      #discs-container div+div
+      {
+        flex-basis: 692px;
+      }
+
+
+      #disc-types
+      {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+      }
+
+      #disc-types div
+      {
+        width: 230px;
+      }
+
       .dgpt_map
       {
         width: 1500px;
@@ -86,24 +159,26 @@
         background: url("images/dgpt_map_events.png") no-repeat;
       }
 
+      /*
       table, th, td
       {
         background-color: black;
         border: 2px solid rgb(255, 255, 255);
         color: white;
       }
+      */
 
       th
       {
         text-align: center;
       }
 
+      /*
       td
       {
         padding-left: 10px;
       }
-      
-      
+      */
 
       .parks_images li
       {
@@ -128,186 +203,206 @@
       <main>
         <div class="content">
           <section id="introduction">
-            <h2>
-              Introduction
-            </h2>
-            <h3>
-              Disc Golf is a hobby in which players throw a disc at a target in the fewest amount of attempts possible. The rules are closely related to golf.
-              Courses are most often free and can be found in public parks, and are typically 9 or 18 holes long. However, there are some private pay to play courses. A "hole" is completed by 
-              throwing a disc from a tee pad (or designated area) toward a target, referred to as a basket (Figure 1). Subsequent throws are from where the disc lands on the course. 
-              A hole is completed when the disc comes to rest in the basket, whether it is caught by the chains or not. The goal is to complete the hole in the fewest number of shots. 
-            </h3>
-            <figure>
-              <img src="images/dg_basket.png">
-              <figcaption>Figure 1. Disc Golf Basket.</figcaption>
-            </figure>
-            <figure>
-              <table id="scorecard">
-              <tr>
-                <th>Hole</th>
-                <th>1</th>
-                <th>2</th>
-                <th>3</th>
-                <th>4</th>
-                <th>5</th>
-                <th>6</th>
-                <th>7</th>
-                <th>8</th>
-                <th>9</th>
-                <th>Totals</th>
-              </tr>
-              <tr>
-                <th>Distance (Feet)</th>
-                <td>261</td>
-                <td>618</td>
-                <td>570</td>
-                <td>301</td>
-                <td>292</td>
-                <td>270</td>
-                <td>280</td>
-                <td>230</td>
-                <td>265</td>
-              </tr>
-              <tr>
-                <th>Par</th>
-                <td>3</td>
-                <td>4</td>
-                <td>4</td>
-                <td>3</td>
-                <td>3</td>
-                <td>3</td>
-                <td>3</td>
-                <td>3</td>
-                <td>3</td>
-              </tr>
-              <tr>
-                <th>Score</th>
-                <td>3</td>
-                <td>4</td>
-                <td>5</td>
-                <td>4</td>
-                <td>6</td>
-                <td>3</td>
-                <td>3</td>
-                <td>4</td>
-                <td>3</td>
-              </tr>
-              <tr>
-                <th>Hole</th>
-                <th>10</th>
-                <th>11</th>
-                <th>12</th>
-                <th>13</th>
-                <th>14</th>
-                <th>15</th>
-                <th>16</th>
-                <th>17</th>
-                <th>18</th>
-              </tr>
-              <tr>
-                <th>Distance (Feet)</th>
-                <td>262</td>
-                <td>235</td>
-                <td>275</td>
-                <td>335</td>
-                <td>291</td>
-                <td>331</td>
-                <td>285</td>
-                <td>536</td>
-                <td>700</td>
-              </tr>
-              <tr>
-                <th>Par</th>
-                <td>3</td>
-                <td>3</td>
-                <td>3</td>
-                <td>3</td>
-                <td>3</td>
-                <td>3</td>
-                <td>3</td>
-                <td>4</td>
-                <td>5</td>
-                <td>59</td>
-              </tr>
-              <tr>
-                <th>Score</th>
-                <td>2</td>
-                <td>4</td>
-                <td>3</td>
-                <td>3</td>
-                <td>5</td>
-                <td>3</td>
-                <td>4</td>
-                <td>4</td>
-                <td>7</td>
-                <td>70</td>
-              </tr>
-              </table>
-              <figcaption>Figure 2. An Example Round Scorecard.</figcaption>
-            </figure>
-            <h3>The Common Terms for Scores on a Hole</h3>
-            <ul>
-              <li>A Par means shooting the predetermined average score</li>
-              <li>An Ace is a hole in one regardless of par</li>
-              <li>An Albatross is three under the hole's par</li>
-              <li>An Eagle is two under par</li>
-              <li>A Birdie is one under</li>
-              <li>A Bogey is one over</li>
-              <li>A Double Bogey is two over</li>
-              <li>A Triple Bogey is three over</li>
-              <li>A Quadruple Bogey is four over</li>
-              <li>Anything above quadruple bogey is referred to as "+X"</li>
-            </ul>
+            <div class="introduction-container">
+              <h2>
+                Introduction
+              </h2>
+              <p>
+                Disc Golf is a hobby in which players throw a disc at a target in the fewest amount of attempts possible. The rules are closely related to golf.
+                Courses are most often free and can be found in public parks, and are typically 9 or 18 holes long. However, there are some private pay to play courses. A "hole" is completed by 
+                throwing a disc from a tee pad (or designated area) toward a target, referred to as a basket (Figure 1). Subsequent throws are from where the disc lands on the course. 
+                A hole is completed when the disc comes to rest in the basket, whether it is caught by the chains or not. The goal is to complete the hole in the fewest number of shots. 
+              </p>
+              <div>
+                <figure>
+                  <img src="images/dg_basket.png">
+                  <figcaption>Figure 1. Disc Golf Basket.</figcaption>
+                </figure>
+              </div>
+              <div>
+                <figure>
+                  <table id="scorecard">
+                  <tr>
+                    <th>Hole</th>
+                    <th>1</th>
+                    <th>2</th>
+                    <th>3</th>
+                    <th>4</th>
+                    <th>5</th>
+                    <th>6</th>
+                    <th>7</th>
+                    <th>8</th>
+                    <th>9</th>
+                    <th>Totals</th>
+                  </tr>
+                  <tr>
+                    <th>Distance (Feet)</th>
+                    <td>261</td>
+                    <td>618</td>
+                    <td>570</td>
+                    <td>301</td>
+                    <td>292</td>
+                    <td>270</td>
+                    <td>280</td>
+                    <td>230</td>
+                    <td>265</td>
+                  </tr>
+                  <tr>
+                    <th>Par</th>
+                    <td>3</td>
+                    <td>4</td>
+                    <td>4</td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>3</td>
+                  </tr>
+                  <tr>
+                    <th>Score</th>
+                    <td>3</td>
+                    <td>4</td>
+                    <td>5</td>
+                    <td>4</td>
+                    <td>6</td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>4</td>
+                    <td>3</td>
+                  </tr>
+                  <tr>
+                    <th>Hole</th>
+                    <th>10</th>
+                    <th>11</th>
+                    <th>12</th>
+                    <th>13</th>
+                    <th>14</th>
+                    <th>15</th>
+                    <th>16</th>
+                    <th>17</th>
+                    <th>18</th>
+                  </tr>
+                  <tr>
+                    <th>Distance (Feet)</th>
+                    <td>262</td>
+                    <td>235</td>
+                    <td>275</td>
+                    <td>335</td>
+                    <td>291</td>
+                    <td>331</td>
+                    <td>285</td>
+                    <td>536</td>
+                    <td>700</td>
+                  </tr>
+                  <tr>
+                    <th>Par</th>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>4</td>
+                    <td>5</td>
+                    <td>59</td>
+                  </tr>
+                  <tr>
+                    <th>Score</th>
+                    <td>2</td>
+                    <td>4</td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>5</td>
+                    <td>3</td>
+                    <td>4</td>
+                    <td>4</td>
+                    <td>7</td>
+                    <td>70</td>
+                  </tr>
+                  </table>
+                  <figcaption>Figure 2. An Example Round Scorecard.</figcaption>
+                </figure>
+              </div>
+              <div>
+                <h3>Common Terms for Scores on a Hole</h3>
+                <ul>
+                  <li>Par means shooting the predetermined average score</li>
+                  <li>Ace is a hole in one regardless of par</li>
+                  <li>Albatross is three under the hole's par</li>
+                  <li>Eagle is two under par</li>
+                  <li>Birdie is one under</li>
+                  <li>Bogey is one over</li>
+                  <li>Double Bogey is two over</li>
+                  <li>Triple Bogey is three over</li>
+                  <li>Quadruple Bogey is four over</li>
+                  <li>Anything above quadruple bogey is referred to as "+X"</li>
+                </ul>
+              </div>
+            </div>
           </section>
           <section id="discs">
-            <h2>
-              What is a Disc?
-            </h2>
-            <figure>
-            <img src="images/dg_bag(transparent)(smaller).png">
-            <figcaption>Figure 3. Disc Golf Bag and Discs.</figcaption>
-            </figure>
-            <p>The majority of discs are made out of polypropene plastic and weigh around 170 grams.<br><br>
-            Discs are generally categorized into 3 different types:</p>
-            <figure>
-              <ul>
-                <li>Driver</li>
-                <img src="images/driver_shape.png">
-                <li>Midrage</li>
-                <img src="images/midrange_shape.png">
-                <li>Putter</li>
-                <img src="images/putter_shape.png">
-              </ul>
-              <figcaption>Figure 4. Three different types of disc.</figcaption>
-            </figure>
-            <h4>Why is it called a disc instead of a frisbee?</h4>
-            <h5>Below is a table describing the different features</h5>
-            <h6>In general discs are smaller in diameter, thinner in profile, and more dense in material</h6>
-            <figure>
-              <table id="disc_frisbee">
-                <tr>
-                  <th></th>
-                  <th>Disc</th>
-                  <th>Frisbee</th>
-                </tr>
-                <tr>
-                  <td>Average Diameter</td>
-                  <td>8.3"</td>
-                  <td>10.75"</td>
-                </tr>
-                <tr>
-                  <td>Shape</td>
-                  <td><img src="images/disc_profile.png"></td>
-                  <td><img src="images/frisbee_profile.png"></td>
-                </tr>
-                <tr>
-                  <td>Designed To</td>
-                  <td>Land at a specific distance with a specific flight</td>
-                  <td>Be caught by another player</td>
-                </tr>
-              </table>
-              <figcaption>Figure 5. Table comparing discs and frisbees.</figcaption>
-            </figure>
+            <div id="discs-container">
+              <h2>What is a Disc?</h2>
+              <div>
+                <figure>
+                <img src="images/dg_bag(transparent)(smaller).png">
+                <figcaption>Figure 3. Disc Golf Bag and Discs.</figcaption>
+                </figure>
+              </div>
+              <div>
+                <p>Discs are usually made out of polypropene plastic and weigh around 170 grams.<br> 
+                  Discs are generally categorized into 3 different types:</p>
+                <figure id="disc-types">
+                  <div>
+                    <h3>Driver</h3>
+                    <img src="images/driver_shape.png">
+                  </div>
+                  <div>
+                    <h3>Midrage</h3>
+                    <img src="images/midrange_shape.png">
+                  </div>
+                  <div>
+                    <h3>Putter</h3>
+                    <img src="images/putter_shape.png">
+                  </div>
+                  <div>
+                    <figcaption>Figure 4. Three different shapes of discs.</figcaption>
+                  </div>
+                </figure>
+              </div>
+              <div>
+                <h4>Why is it called a disc instead of a frisbee?</h4>
+                <h5>Below is a table describing the different features</h5>
+                <h6>In general discs are smaller in diameter, thinner in profile, and more dense in material</h6>
+                <figure>
+                  <table id="disc_frisbee">
+                    <tr>
+                      <th></th>
+                      <th>Disc</th>
+                      <th>Frisbee</th>
+                    </tr>
+                    <tr>
+                      <td>Average Diameter</td>
+                      <td>8.3"</td>
+                      <td>10.75"</td>
+                    </tr>
+                    <tr>
+                      <td>Shape</td>
+                      <td><img src="images/disc_profile.png"></td>
+                      <td><img src="images/frisbee_profile.png"></td>
+                    </tr>
+                    <tr>
+                      <td>Designed To</td>
+                      <td>Land at a specific distance with a specific flight</td>
+                      <td>Be caught by another player</td>
+                    </tr>
+                  </table>
+                  <figcaption>Figure 5. Table comparing discs and frisbees.</figcaption>
+                </figure>
+              </div>
+            </div>
           </section>
           <section id="local_events">
             <h2>
