@@ -20,7 +20,7 @@
       .navbar ul
       {
         list-style-type: none;
-        margin-top: 5px;
+        margin-top: 105px;
         width: 150px;
         right: 1%;
         padding: 0;
@@ -53,7 +53,8 @@
         font-size: xx-large;
         border-radius: 10px;
         color: white;
-        width: 87%;
+        margin-top: -3%;
+        margin-bottom: -3%;
       }
 
       h2
@@ -182,44 +183,73 @@
         padding-top: 5px;
       }
 
-
-      .dgpt_map
+      figure#table
       {
-        width: 1500px;
-        height: 750px;
-        background: url("images/dgpt_map.png") no-repeat;
+        padding: 1px;
+        margin: 0;
       }
 
-      .dgpt_map:hover
+      figure#leagues table
       {
-        background: url("images/dgpt_map_events.png") no-repeat;
-      }
-
-      /*
-      table, th, td
-      {
-        background-color: black;
-        border: 2px solid rgb(255, 255, 255);
+        background-color: #6D454C;
         color: white;
       }
-      */
 
-      th
+      figure#leagues td, tr
+      {
+        border: 1px solid rgb(255, 255, 255);
+      }
+      
+      #courses-container div:last-child h3
       {
         text-align: center;
       }
-
-      /*
-      td
-      {
-        padding-left: 10px;
-      }
-      */
 
       .parks_images li
       {
         margin-top: -10px;
       }
+
+      #dgpt_map
+      {
+        width: 1074px;
+        height: 750px;
+        background: url("images/dgpt_map.png") no-repeat;
+      }
+
+      #dgpt_map:hover
+      {
+        background: url("images/dgpt_map_events.png") no-repeat;
+      }
+
+      #tour-container div:nth-child(3n) figure
+      {
+        margin: 1px;
+      }
+
+      #tour-container div:nth-child(3n) figcaption
+      {
+        margin-top: -15%;
+      }
+
+      #tour-container div:last-child
+      {
+        flex-basis: 1074px;
+      }
+
+      footer
+      {
+        background-color: #412429;
+        text-align: center;
+        border-radius: 10px;
+        color: white;
+      }
+
+      footer a
+      {
+        color: white;
+      }
+      
     </style>
   </head>
   <body>
@@ -442,64 +472,68 @@
           </section>
           <section id="local_events">
             <div id="events-container">
-              <h2>
-                Leagues and Tournaments
-              </h2>
-              <p>Leagues are weekly rounds open to all players, entry fees are often between $10 and $15. There are payouts for the top players and best
-                shots such as aces (hole in one). Figure 8 is a table of the parks in Charlotte that currently have weekly leagues. If you would like to find out more about the Charlotte disc golf leagues click this <a href="https://www.facebook.com/groups/charlotteareadg">link</a>.</p>
-              <p>Tournaments are one time competitions. They are  either sanctioned by the Professional Disc Golf Association (PDGA) or unsanctioned. 
-                Amongst sanctioned tournaments there are 3 tiers C, B and A. C is the lowest and A is the highest. Competitors often play two rounds in one day 
-                on the weekend. If you would like more information on specific tournaments click the link at <a href="https://www.discgolfscene.com/tournaments">Disc Golf Scene Tournaments</a>.</p>
-              <h3>Leagues in Charlotte</h3>
-              <figure>
-                <table>
-                  <tr>
-                    <th>Day of the Week</th>
-                    <th>Location</th>
-                  </tr>
-                  <tr>
-                    <td>Monday</td>
-                    <td>Bailey Park</td>
-                  </tr>
-                  <tr>
-                    <td>Tuesday</td>
-                    <td>Rennaissance Park</td>
-                  </tr>
-                  <tr>
-                    <td>Wednesday</td>
-                    <td>Rennaissance Park</td>
-                    <td>Primal Brewing</td>
-                    <td>Brackets Bluff Course</td>
-                  </tr>
-                  <tr>
-                    <td>Thursday</td>
-                    <td>Sugaw Park</td>
-                  </tr>
-                  <tr>
-                    <td>Friday</td>
-                    <td>Kilborne Park</td>
-                  </tr>
-                  <tr>
-                    <td>Saturday</td>
-                  </tr>
-                  <tr>
-                    <td>Sunday</td>
-                    <td>Winget Park</td>
-                  </tr>
-                </table>
-                <figcaption>Figure 6. Table of weekly leagues in Charlotte.</figcaption>
-              </figure>
-              <h3>Parks</h3>
-              <figure>
-                <ul class="parks_images">
-                  <li><img src="images/bailey_park_map.png"></li>
-                  <li><img src="images/renaissance_map.png"></li>
-                  <li><img src="images/sugaw_map.png"></li>
-                  <li><img src="images/kilborne_map.png"></li>
-                  <li><img src="images/winget_map.png"></li>
-                </ul>    
-                <figcaption>Figure 7. Maps of courses with weekly leagues.</figcaption>      
-              </figure>
+              <h2>Local Events</h2>
+              <div>
+                <p><strong>Leagues</strong> are weekly rounds open to all players, entry fees are often between $10 and $15. There are payouts for the top players and best
+                  shots such as aces (hole in one). Figure 8 is a table of the parks in Charlotte that currently have weekly leagues. If you would like to find out more about the Charlotte disc golf leagues click this <a href="https://www.facebook.com/groups/charlotteareadg">link</a>.</p>
+                <p><strong>Tournaments</strong> are singular competitions. They are  either sanctioned by the Professional Disc Golf Association (PDGA) or unsanctioned. 
+                  Amongst sanctioned tournaments there are 3 tiers C, B and A. C is the lowest and A is the highest. Competitors often play two rounds in one day 
+                  on the weekend. If you would like more information on specific tournaments click the link at <a href="https://www.discgolfscene.com/tournaments">Disc Golf Scene Tournaments</a>.</p>
+              </div>
+              <div>
+                <h3>Leagues in Charlotte</h3>
+                <figure id="leagues">
+                  <table>
+                    <tr>
+                      <th>Day of the Week</th>
+                      <th>Location</th>
+                    </tr>
+                    <tr>
+                      <td>Monday</td>
+                      <td>Bailey Park</td>
+                    </tr>
+                    <tr>
+                      <td>Tuesday</td>
+                      <td>Rennaissance Park</td>
+                    </tr>
+                    <tr>
+                      <td>Wednesday</td>
+                      <td>Rennaissance Park</td>
+                      <td>Primal Brewing</td>
+                      <td>Brackets Bluff Course</td>
+                    </tr>
+                    <tr>
+                      <td>Thursday</td>
+                      <td>Sugaw Park</td>
+                    </tr>
+                    <tr>
+                      <td>Friday</td>
+                      <td>Kilborne Park</td>
+                    </tr>
+                    <tr>
+                      <td>Saturday</td>
+                    </tr>
+                    <tr>
+                      <td>Sunday</td>
+                      <td>Winget Park</td>
+                    </tr>
+                  </table>
+                  <figcaption>Figure 6. Table of weekly leagues in Charlotte.</figcaption>
+                </figure>
+              </div>
+              <div>
+                <h3>Course Maps</h3>
+                <figure>
+                  <ul class="parks_images">
+                    <li><img src="images/bailey_park_map.png"></li>
+                    <li><img src="images/renaissance_map.png"></li>
+                    <li><img src="images/sugaw_map.png"></li>
+                    <li><img src="images/kilborne_map.png"></li>
+                    <li><img src="images/winget_map.png"></li>
+                  </ul>    
+                  <figcaption>Figure 7. Maps of courses with weekly leagues.</figcaption>      
+                </figure>
+              </div>
             </div>
           </section>
           <section id="courses_in_charlotte">
@@ -507,100 +541,105 @@
               <h2>
                 Courses in Charlotte
               </h2>
-              <p>Due to Charlotte's numerous parks there are a multitude of disc golf courses to choose from. Figure 8 below is a map showing 
-                courses in and around the Charlotte area. Three courses: Torma Town, Brackets Bluff and Camp Canaan cost money to play. Figure 
-                9 below is a table of the top courses by player rating on the app UDisc.
-              </p>
-              <figure>
-                <img src="images/udisc_map.png">
-                <figcaption>Figure 8. UDisc map of Charlotte Area Courses.</figcaption>
-              </figure>
-              <h3>Top 18 Hole Courses in and around Charlotte</h3>
-              <figure>
-                <table id="courses">
-                  <tr>
-                    <th>Course Name</th>
-                    <th>Rating on UDisc</th>
-                  </tr>
-                  <tr>
-                    <td>Eastway Park</td>
-                    <td class="green_score">4.6</td>
-                  </tr>
-                  <tr>
-                    <td>Hornets Nest Park</td>
-                    <td class="green_score">4.6</td>
-                  </tr>
-                  <tr>
-                    <td>Camp Canaan - Riverbend</td>
-                    <td class="green_score">4.6</td>
-                  </tr>
-                  <tr>
-                    <td>Reedy Creek</td>
-                    <td class="yellow_score">4.5</td>
-                  </tr>
-                  <tr>
-                    <td>Nevin</td>
-                    <td class="yellow_score">4.5</td>
-                  </tr>
-                  <tr>
-                    <td>The Scrapyard</td>
-                    <td class="yellow_score">4.5</td>
-                  </tr>
-                  <tr>
-                    <td>Winthrop University</td>
-                    <td class="yellow_score">4.5</td>
-                  </tr>
-                  <tr>
-                    <td>Kilborne TPC</td>
-                    <td class="yellow_score">4.5</td>
-                  </tr>
-                  <tr>
-                    <td>Torma Town</td>
-                    <td class="yellow_score">4.4</td>
-                  </tr>
-                  <tr>
-                    <td>Angry Beaver</td>
-                    <td class="yellow_score">4.3</td>
-                  </tr>
-                  <tr>
-                    <td>Plantation Ruins at Winget</td>
-                    <td class="yellow_score">4.3</td>
-                  </tr>
-                  <tr>
-                    <td>Renaissance Park - Gold</td>
-                    <td class="yellow_score">4.3</td>
-                  </tr>
-                  <tr>
-                    <td>Dry Creek at SPCC</td>
-                    <td class="yellow_score">4.3</td>
-                  </tr>
-                  <tr>
-                    <td>Renaissance PArk DGC - RenSke</td>
-                    <td class="red_score">4.2</td>
-                  </tr>
-                  <tr>
-                    <td>Bradley Center</td>
-                    <td class="red_score">4.2</td>
-                  </tr>
-                  <tr>
-                    <td>Frank Like Park</td>
-                    <td class="red_score">4.1</td>
-                  </tr>
-                  <tr>
-                    <td>Cane Creek Park</td>
-                    <td class="red_score">4.1</td>
-                  </tr>
-                  <tr>
-                    <td>Sugaw Creek Park DGC</td>
-                    <td class="red_score">4.0</td>
-                  </tr>
-                  <tr>
-                    <td>Boyd Hill</td>
-                    <td class="red_score">4.0</td>
-                  </tr>
-                </table>
-                <figcaption>Figure 9. Top Rated Courses in Charlotte.</figcaption>
-              </figure>
+              <div>
+                <p>Due to Charlotte's numerous parks there are a multitude of disc golf courses to choose from. Figure 8 below is a map showing 
+                  courses in and around the Charlotte area. Three courses: Torma Town, Brackets Bluff and Camp Canaan cost money to play. Figure 
+                  9 below is a table of the top courses by player rating on the app UDisc.</p>
+              </div>
+              <div>
+                <figure>
+                  <img src="images/udisc_map.png">
+                  <figcaption>Figure 8. UDisc map of Charlotte Area Courses.</figcaption>
+                </figure>
+              </div>
+              <div>
+                <h3>Top 18 Hole Courses in and around Charlotte</h3>
+                <figure>
+                  <table id="courses">
+                    <tr>
+                      <th>Course Name</th>
+                      <th>Rating on UDisc</th>
+                    </tr>
+                    <tr>
+                      <td>Eastway Park</td>
+                      <td class="green_score">4.6</td>
+                    </tr>
+                    <tr>
+                      <td>Hornets Nest Park</td>
+                      <td class="green_score">4.6</td>
+                    </tr>
+                    <tr>
+                      <td>Camp Canaan - Riverbend</td>
+                      <td class="green_score">4.6</td>
+                    </tr>
+                    <tr>
+                      <td>Reedy Creek</td>
+                      <td class="yellow_score">4.5</td>
+                    </tr>
+                    <tr>
+                      <td>Nevin</td>
+                      <td class="yellow_score">4.5</td>
+                    </tr>
+                    <tr>
+                      <td>The Scrapyard</td>
+                      <td class="yellow_score">4.5</td>
+                    </tr>
+                    <tr>
+                      <td>Winthrop University</td>
+                      <td class="yellow_score">4.5</td>
+                    </tr>
+                    <tr>
+                      <td>Kilborne TPC</td>
+                      <td class="yellow_score">4.5</td>
+                    </tr>
+                    <tr>
+                      <td>Torma Town</td>
+                      <td class="yellow_score">4.4</td>
+                    </tr>
+                    <tr>
+                      <td>Angry Beaver</td>
+                      <td class="yellow_score">4.3</td>
+                    </tr>
+                    <tr>
+                      <td>Plantation Ruins at Winget</td>
+                      <td class="yellow_score">4.3</td>
+                    </tr>
+                    <tr>
+                      <td>Renaissance Park - Gold</td>
+                      <td class="yellow_score">4.3</td>
+                    </tr>
+                    <tr>
+                      <td>Dry Creek at SPCC</td>
+                      <td class="yellow_score">4.3</td>
+                    </tr>
+                    <tr>
+                      <td>Renaissance Park DGC - RenSke</td>
+                      <td class="red_score">4.2</td>
+                    </tr>
+                    <tr>
+                      <td>Bradley Center</td>
+                      <td class="red_score">4.2</td>
+                    </tr>
+                    <tr>
+                      <td>Frank Like Park</td>
+                      <td class="red_score">4.1</td>
+                    </tr>
+                    <tr>
+                      <td>Cane Creek Park</td>
+                      <td class="red_score">4.1</td>
+                    </tr>
+                    <tr>
+                      <td>Sugaw Creek Park DGC</td>
+                      <td class="red_score">4.0</td>
+                    </tr>
+                    <tr>
+                      <td>Boyd Hill</td>
+                      <td class="red_score">4.0</td>
+                    </tr>
+                  </table>
+                  <figcaption>Figure 9. Top Rated Courses in Charlotte.</figcaption>
+                </figure>
+              </div>
             </div>
           </section>
           <section id="professional_tour">
@@ -608,23 +647,28 @@
               <h2>
                 The Professional Tour
               </h2>
-              <p>
-                The Disc Golf Pro Tour is the pinnacle of competition in professional disc golf. 
-                It features men's and women's professional divisions. The DGPT championship is played 
-                here in Charlotte, first place in each division comes with a $30,000 payout.
-              </p>
-              <figure>
-                <div class="dgpt_map"></div>
-                <figcaption>Figure 10. Map of the Disc Golf Pro Tour.</figcaption>
-              </figure>
-              <p>
-                In addition to the DGPT championship there is also the "United States Disc Golf Championship" 
-                in Rock Hill, South Carolina. It is played on the grounds of Winthrop University.
-              </p>
-              <figure>
-                <img src="images/dg_tournament.png">
-                <figcaption>Figure 11. Winthrop University during U.S. Disc Golf Championship.</figcaption>
-              </figure>
+              <div>
+                <p>
+                  The Disc Golf Pro Tour is the pinnacle of competition in professional disc golf. 
+                  It features men's and women's professional divisions. The DGPT championship is played 
+                  here in Charlotte, first place in each division comes with a $30,000 payout.
+                </p>
+              </div>
+              <div>
+                <figure>
+                  <div id="dgpt_map"></div>
+                  <figcaption>Figure 10. Map of the Disc Golf Pro Tour.</figcaption>
+                </figure>
+              </div>
+              <div>
+                <p>
+                  In addition to the DGPT championship there is also the United States Disc Golf Championship
+                  in Rock Hill, South Carolina. It is played on the grounds of Winthrop University.</p>
+                <figure>
+                  <img src="images/dg_tournament.png">
+                  <figcaption>Figure 11. Winthrop University during U.S. Disc Golf Championship.</figcaption>
+                </figure>
+              </div>
             </div>
           </section>
         </div>
