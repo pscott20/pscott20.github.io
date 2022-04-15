@@ -384,7 +384,7 @@ a.nav-link:active
 /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
 .show {display:block;}
 
-#image_list
+#image_list li
 {
-  display: hidden;
+  display: inline;
 }
