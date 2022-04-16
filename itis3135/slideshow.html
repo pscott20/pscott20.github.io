@@ -6,17 +6,20 @@
     <link rel="icon" href="images/favicon.ico">
     <link href="styles/default.css" type="text/css" rel="stylesheet"/>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative&display=swap" rel="stylesheet"/>
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.js" integrity="sha256-HwWONEZrpuoh951cQD1ov2HUK5zA5DwJ1DNUXaM6FsY=" 
+        crossorigin="anonymous">
+    </script>
   </head>
   <body>
-    <div id="page-container">
       <header>
           <div data-include="components/header.html"></div>
       </header>
       <main>
         <h1>Slideshow</h1>
-        <p>Click images to view.</p>
         <ul id="image_list">
-            <li>
+            <li><a href="images/slideshow_images/motorcycle_right_profile.png" title="Motorcycle right profile"></a></li>
+            <li><a href="images/slideshow_images/motorcycle_right_quarter.png" title="Motorcycle right quarter"></a></li>
+            <!--<li>
                 <figure>
                     <a href="images/slideshow_images/motorcycle_right_profile.png" title="Motorcycle right profile"> 
                         <img src="images/slideshow_images/motorcycle_right_profile_thumbnail.png" alt="Motorcycle rightside profile"></a>
@@ -30,14 +33,37 @@
                     <figcaption>Motorcycle rightside rear quarter</figcaption>
                 </figure>
             </li>
-            <li><figure><img src="images/slideshow_images/motorcycle_back.png" title="Motorcycle rear" alt="Motorcycle rear"><figcaption>Motorcycle rear</figcaption></figure></li>
-            <li><figure><img src="images/slideshow_images/motorcycle_left_quarter.png" title="Motorcycle left quarter" alt="Motorcycle leftside rear quarter"><figcaption>Motorcycle leftside rear quarter</figcaption></figure></li>
-            <li><figure><img src="images/slideshow_images/motorcycle_left_lower.png" title="Motorcycle left quarter" alt="Motorcycle left lower"><figcaption>Motorcycle left lower</figcaption></figure></li>
-            <li><figure><img src="images/slideshow_images/motorcycle_front.png" title="Motorcycle front" alt="Motorcycle front"><figcaption>Motorcycle front</figcaption></figure></li>
+            <li>
+                <figure>
+                    <a href="images/slideshow_images/motorcycle_back.png" title="Motorcycle right quarter">
+                    <img src="images/slideshow_images/motorcycle_back_thumbnail.png" title="Motorcycle rear" alt="Motorcycle rear"></a>
+                    <figcaption>Motorcycle rear</figcaption>
+                </figure>
+            </li>
+            <li>
+                <figure>
+                    <a href="images/slideshow_images/motorcycle_left_quarter.png" title="Motorcycle left quarter">
+                    <img src="images/slideshow_images/motorcycle_left_quarter_thumbnail.png" alt="Motorcycle leftside rear quarter"></a>
+                    <figcaption>Motorcycle leftside rear quarter</figcaption>
+                </figure>
+            </li>
+            <li>
+                <figure>
+                    <a href="images/slideshow_images/motorcycle_left_lower.png" title="Motorcycle left quarter">
+                    <img src="images/slideshow_images/motorcycle_left_lower_thumbnail.png" alt="Motorcycle left lower"></a>
+                    <figcaption>Motorcycle left lower</figcaption>
+                </figure>
+            </li>
+            <li>
+                <figure>
+                    <a href="images/slideshow_images/motorcycle_front.png" title="Motorcycle front">
+                    <img src="images/slideshow_images/motorcycle_front_thumbnail.png"  alt="Motorcycle front"></a>
+                    <figcaption>Motorcycle front</figcaption>
+                </figure>
+            </li>-->
         </ul>
+        <p><img src="" alt="" id="main_image"></p>
         <h2 id="caption"></h2>
-        <p><img id="main_image" src="images/slideshow_images/motorcycle_right_profile.png" alt=""></p>
-        
       </main>
       <footer>
         <div data-include="components/footer.html"></div>
@@ -46,6 +72,5 @@
       </footer>
       <script src="../scripts/include.js"></script>
       <script src="scripts/slideshow_script.js"></script>
-    </div>
   </body>
 </html>

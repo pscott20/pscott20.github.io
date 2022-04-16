@@ -14,11 +14,13 @@ window.onload = function()
     for (i = 0; i < links.length; i++)
     {
         linkNode = links[i];
+        //Preload image and copy title properties
         image = new Image();
         image.src = linkNode.getArribute("href");
         image.title = linkNode.getArribute("title");
         imageCache[imageCache.length] = image;
     }
+    
     //Start slideshow
     var imageCounter = 0;
     var timer = setInterval(
