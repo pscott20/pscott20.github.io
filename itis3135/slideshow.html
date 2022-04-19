@@ -15,55 +15,43 @@
           <div data-include="components/header.html"></div>
       </header>
       <main>
-        <h1>Slideshow</h1>
-        <ul id="image_list">
-            <li><a href="images/slideshow_images/motorcycle_right_profile.png" title="Motorcycle right profile"></a></li>
-            <li><a href="images/slideshow_images/motorcycle_right_quarter.png" title="Motorcycle right quarter"></a></li>
-            <!--<li>
-                <figure>
-                    <a href="images/slideshow_images/motorcycle_right_profile.png" title="Motorcycle right profile"> 
-                        <img src="images/slideshow_images/motorcycle_right_profile_thumbnail.png" alt="Motorcycle rightside profile"></a>
-                        <figcaption>Motorcycle rightside profile</figcaption>
-                </figure>
-            </li>
-            <li>
-                <figure>
-                    <a href="images/slideshow_images/motorcycle_right_quarter.png" title="Motorcycle right quarter">
-                    <img src="images/slideshow_images/motorcycle_right_quarter_thumbnail.png" alt="Motorcycle rightside rear quarter"></a>
-                    <figcaption>Motorcycle rightside rear quarter</figcaption>
-                </figure>
-            </li>
-            <li>
-                <figure>
-                    <a href="images/slideshow_images/motorcycle_back.png" title="Motorcycle right quarter">
-                    <img src="images/slideshow_images/motorcycle_back_thumbnail.png" title="Motorcycle rear" alt="Motorcycle rear"></a>
-                    <figcaption>Motorcycle rear</figcaption>
-                </figure>
-            </li>
-            <li>
-                <figure>
-                    <a href="images/slideshow_images/motorcycle_left_quarter.png" title="Motorcycle left quarter">
-                    <img src="images/slideshow_images/motorcycle_left_quarter_thumbnail.png" alt="Motorcycle leftside rear quarter"></a>
-                    <figcaption>Motorcycle leftside rear quarter</figcaption>
-                </figure>
-            </li>
-            <li>
-                <figure>
-                    <a href="images/slideshow_images/motorcycle_left_lower.png" title="Motorcycle left quarter">
-                    <img src="images/slideshow_images/motorcycle_left_lower_thumbnail.png" alt="Motorcycle left lower"></a>
-                    <figcaption>Motorcycle left lower</figcaption>
-                </figure>
-            </li>
-            <li>
-                <figure>
-                    <a href="images/slideshow_images/motorcycle_front.png" title="Motorcycle front">
-                    <img src="images/slideshow_images/motorcycle_front_thumbnail.png"  alt="Motorcycle front"></a>
-                    <figcaption>Motorcycle front</figcaption>
-                </figure>
-            </li>-->
-        </ul>
-        <p><img src="" alt="" id="main_image"></p>
-        <h2 id="caption"></h2>
+        <h1 class="slideshow-text">Slideshow</h1>
+        <h2 class="slideshow-text">1989 Honda VTR 250</h2>
+
+        <div class="slideshow-container">
+            <div class="slideshow-slides fade">
+                <div class="slide-number">1/5</div>
+                <img src="images/slideshow_images/motorcycle_right_profile.png">
+                <div class="slide-caption">Right Profile</div>
+            </div>
+            <div class="slideshow-slides fade">
+                <div class="slide-number">2/5</div>
+                <img src="images/slideshow_images/motorcycle_right_quarter.png">
+                <div class="slide-caption">3/4 Profile</div>
+            </div>
+            <div class="slideshow-slides fade">
+                <div class="slide-number">3/5</div>
+                <img src="images/slideshow_images/motorcycle_back.png">
+                <div class="slide-caption">Rear Profile</div>
+            </div>
+            <div class="slideshow-slides fade">
+                <div class="slide-number">4/5</div>
+                <img src="images/slideshow_images/motorcycle_left_lower.png" >
+                <div class="slide-caption">Left Profile</div>
+                </div>
+            <div class="slideshow-slides fade">
+                <div class="slide-number">5/5</div>
+                <img src="images/slideshow_images/motorcycle_front.png" >
+                <div class="slide-caption">Front Profile</div>
+                </div>
+
+        </div>
+        <div style="text-align:center">
+        <span class="dot"></span> 
+        <span class="dot"></span> 
+        <span class="dot"></span> 
+        </div>
+
       </main>
       <footer>
         <div data-include="components/footer.html"></div>
