@@ -13,31 +13,33 @@
       <div data-include="components/header.html"></div> 
     </header>
     <main>
-        <h3>My First Scripts Page</h3>
-        <!--Button to test JavaScript-->
-        <h3><button type="button" id="testButton" onclick="scriptTest()">Test JavaScript</button></h3>
-        <!--Heading 3 to display the time of day-->
-        <h3><span id="timeOfDay"></span></h3>
-        <!--JavaScript to display the time of day and date.-->
-        <script>
-            var today = new Date();
-            document.write("Today is " + today.toDateString());            
-        </script>
-        <br>
-        <br>
-        <!--Form that prompts the user for input-->
-        <form id="myForm">
-            <label for="name">Enter Name </label>
-            <input type="text" id="name"><br><br>
-            <label for="mood">Enter Mood </label>
-            <input type="text" id="mood"><br>
-            <button type="button" onclick="myFunction()">Submit</button>
-            <input type="button" onclick="resetFunction()" value="Reset Form"><!--This button is to reset the inputs in the forms-->
-        </form>
-        <br>
-        <br>
-        <!--Paragraph to output the results of the form.-->
-        <p id="output"></p>
+        <div class="first_scripts_container">
+            <h3>My First Scripts Page</h3>
+            <!--Button to test JavaScript-->
+            <h3><button type="button" id="testButton" onclick="scriptTest()">Test JavaScript</button></h3>
+            <!--Heading 3 to display the time of day-->
+            <h3><span id="timeOfDay"></span></h3>
+            <!--JavaScript to display the time of day and date.-->
+            <script>
+                var today = new Date();
+                document.write("Today is " + today.toDateString());            
+            </script>
+            <br>
+            <br>
+            <!--Form that prompts the user for input-->
+            <form id="myForm">
+                <label for="name">Enter Name </label>
+                <input type="text" id="name"><br><br>
+                <label for="mood">Enter Mood </label>
+                <input type="text" id="mood"><br>
+                <button type="button" onclick="myFunction()">Submit</button>
+                <input type="button" onclick="resetFunction()" value="Reset Form"><!--This button is to reset the inputs in the forms-->
+            </form>
+            <br>
+            <br>
+            <!--Paragraph to output the results of the form.-->
+            <p id="output"></p>
+        </div>
         <script>
             //Function that assigns the inputs to variables then prints them when the submit button is clicked.
             function myFunction()
@@ -63,7 +65,7 @@
         <button type="button" id="color_button" onclick="changeColor()">Click me to change color</button>
         <br>
         <!--Button that changes it's value when clicked.-->
-        <input onclick="changeText()" type="button" value="Thing 1" id="button4"></input>
+        <input onclick="changeText()" type="button" value="Thing 1" id="button4">
         <br>
         <!--Text that changes color when it is clicked.-->
         <h3 id="color_text" onmousedown="mouseDown()" onmouseup="mouseUp()">Click this text!</h3>
