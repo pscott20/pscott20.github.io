@@ -443,4 +443,5 @@ a.nav-link:active
 .first_scripts_container {
   justify-content: center;
   align-items: center;
+  margin: 1%;
 }
