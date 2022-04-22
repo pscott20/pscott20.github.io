@@ -2,24 +2,23 @@ const enterNumber = document.getElementById('enterNumber');
 const submitButton = document.getElementById('submitButton');
 const output = document.getElementById('output');
 
-enterNumber.addEventListener("keyup", () => { //Set the buttons to disabled until a value is entered in the form.
-    submitButton.disabled = resetButton.disabled = !enterNumber.value; 
-});
+let polygon = "hena";
 
-submitForm = (e) => {
-    let polygon = "hena";
+polygonAssign = (e) => {
     e.preventDefault(); //Prevents the form from submitting to a new page with the form properties as query parameters.
     if(enterNumber.value < 0)
     {
-        absoluteNumber = Math.abs(enterNumber.value);
-        output.innerText = `The number was converted to a positive number: ${absoluteNumber}.`; 
-    }else if(enterNumber.value == 1)
-    {
-        output.innerText = `The corresponding polygon is called a ${polygon}gon.`;
-    }else if(enterNumber.value == 2)
+        negativeNumber = enterNumber.value
+        enterNumber.value = Math.abs(enterNumber.value);
+        absoluteNumberOutput.innerText = `The negative number that was entered, ${negativeNumber}, was converted 
+            to a positive number: ${enterNumber.value}.`;
+        polygonAssign(e);
+    }
+    else if(enterNumber.value == 2)
     {
         polygon = "di";
-    }else if(enterNumber.value == 3)
+    }
+    else if(enterNumber.value == 3)
     {
         polygon = "tri";
     }
@@ -91,13 +90,11 @@ submitForm = (e) => {
     {
         polygon = "icos";
     }
-    
-    if (enterNumber.value < 1)
-    {
-        enterNumber.value = Math.abs(enterNumber.value);
-        absoluteNumberOutput.innerText = `The number was converted to a positive number: ${enterNumber.value}.`; 
-    }
+    polygonOutput();
+}
 
+function polygonOutput() 
+{
     if(enterNumber.value > 10 && enterNumber.value < 20) 
     {
         output.innerText = `The corresponding polygon is called a ${polygon}decagon.`;
@@ -106,7 +103,7 @@ submitForm = (e) => {
     {
         output.innerText = `The corresponding polygon is called a ${polygon}gon.`;   
     }
-    else if(enterNumber.value > 20)
+    else if(enterNumber.value > 20 || enterNumber.value == 0)
     {
         output.innerText = "Error, please enter a number from 1 and 20";
     }
