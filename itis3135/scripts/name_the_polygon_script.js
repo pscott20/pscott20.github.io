@@ -1,170 +1,121 @@
-window.onclick = function()
-{
-    document.getElementById("submitButton").onclick = getShape;
-    //document.getElementById("submitButton").onclick = validateEntry;
-    document.getElementById("resetButton").onclick = resetEntry;
-}
+const enterNumber = document.getElementById('enterNumber');
+const submitButton = document.getElementById('submitButton');
+const output = document.getElementById('output');
 
-function validateEntry()
-{
-    if (numberEntered > 21 || numberEntered == 0)
+enterNumber.addEventListener("keyup", () => { //Set the buttons to disabled until a value is entered in the form.
+    submitButton.disabled = resetButton.disabled = !enterNumber.value; 
+});
+
+submitForm = (e) => {
+    let polygon = "hena";
+    e.preventDefault(); //Prevents the form from submitting to a new page with the form properties as query parameters.
+    if(enterNumber.value < 0)
     {
-        var numberEntered = document.getElementById("userPrompt").value;
-        alert("Oops! You entered " + numberEntered + ". Please enter a value between 1 and 20");
+        absoluteNumber = Math.abs(enterNumber.value);
+        output.innerText = `The number was converted to a positive number: ${absoluteNumber}.`; 
+    }else if(enterNumber.value == 1)
+    {
+        output.innerText = `The corresponding polygon is called a ${polygon}gon.`;
+    }else if(enterNumber.value == 2)
+    {
+        polygon = "di";
+    }else if(enterNumber.value == 3)
+    {
+        polygon = "tri";
     }
-    if (numberEntered < 0)
+    else if(enterNumber.value == 4)
     {
-        var absoluteNumber = Math.abs(numberEntered);
-        alert("Your number was converted to a positive value"); 
+        polygon = "tetra";
+    }
+    else if(enterNumber.value == 5)
+    {
+        polygon = "penta";
+    }
+    else if(enterNumber.value == 6)
+    {
+        polygon = "hexa";
+    }
+    else if(enterNumber.value == 7)
+    {
+        polygon = "hepta";  
+    }
+    else if(enterNumber.value == 8)
+    {
+        polygon = "octa";
+    }
+    else if(enterNumber.value == 9)
+    {
+        polygon = "ennea";
+    }
+    else if(enterNumber.value == 10)
+    {
+        polygon = "deca";
+    }
+    else if(enterNumber.value == 11)
+    {
+        polygon = "hen";
+    } 
+    else if(enterNumber.value == 12)
+    {
+        polygon = "do";  
+    }
+    else if(enterNumber.value == 13)
+    {
+        polygon = "tri";
+    }
+    else if(enterNumber.value == 14)
+    {
+        polygon = "tetra";
+    }
+    else if(enterNumber.value == 15)
+    {
+        polygon = "penta"; 
+    }
+    else if(enterNumber.value == 16)
+    {
+        polygon = "hexa";
+    }
+    else if(enterNumber.value == 17)
+    {
+        polygon = "hepta"; 
+    }
+    else if(enterNumber.value == 18)
+    {
+        polygon = "octa";
+    }
+    else if(enterNumber.value == 19)
+    {
+        polygon = "ennea";
+    }
+    else if(enterNumber.value == 20)
+    {
+        polygon = "icos";
     }
     
-}
-
-//Function that takes in number of sides as a parameter and returns the polygon name.
-function getShape()
-{
-    var numberEntered = document.getElementById("userPrompt").value;
-
-    //Check if the number is within the limits
-    if (numberEntered < 21)
+    if (enterNumber.value < 1)
     {
-        if(numberEntered < 0)
-        {
-            var absoluteNumber = Math.abs(numberEntered);
-            alert("Your number was converted to a positive value"); 
-        }
-        else if(numberEntered == 1)
-        {
-            var polygon = "hena";
-            var output = "The corresponding polygon is called a " + polygon + "gon.";
-            document.getElementById('output').innerHTML = output;  
-        } 
-        else if(numberEntered == 2)
-        {
-            var polygon = "di";
-            var output = "The corresponding polygon is called a " + polygon + "gon.";
-            document.getElementById('output').innerHTML = output;  
-        }
-        else if(numberEntered == 3)
-        {
-            var polygon = "tri";
-            var output = "The corresponding polygon is called a " + polygon + "gon.";
-            document.getElementById('output').innerHTML = output;  
-        }
-        else if(numberEntered == 4)
-        {
-            var polygon = "tetra";
-            var output = "The corresponding polygon is called a " + polygon + "gon.";
-            document.getElementById('output').innerHTML = output;  
-        }
-        else if(numberEntered == 5)
-        {
-            var polygon = "penta";
-            var output = "The corresponding polygon is called a " + polygon + "gon.";
-            document.getElementById('output').innerHTML = output;  
-        }
-        else if(numberEntered == 6)
-        {
-            var polygon = "hexa";
-            var output = "The corresponding polygon is called a " + polygon + "gon.";
-            document.getElementById('output').innerHTML = output;  
-        }
-        else if(numberEntered == 7)
-        {
-            var polygon = "hepta";
-            var output = "The corresponding polygon is called a " + polygon + "gon.";
-            document.getElementById('output').innerHTML = output;  
-        }
-        else if(numberEntered == 8)
-        {
-            var polygon = "octa";
-            var output = "The corresponding polygon is called a " + polygon + "gon.";
-            document.getElementById('output').innerHTML = output;  
-        }
-        else if(numberEntered == 9)
-        {
-            var polygon = "ennea";
-            var output = "The corresponding polygon is called a " + polygon + "gon.";
-            document.getElementById('output').innerHTML = output;  
-        }
-        else if(numberEntered == 10)
-        {
-            var polygon = "deca";
-            var output = "The corresponding polygon is called a " + polygon + "gon.";
-            document.getElementById('output').innerHTML = output;  
-        }
-        else if(numberEntered == 11)
-        {
-            var polygon = "hen";
-            var output = "The corresponding polygon is called a " + polygon + "decagon.";
-            document.getElementById('output').innerHTML = output;  
-        } 
-        else if(numberEntered == 12)
-        {
-            var polygon = "do";
-            var output = "The corresponding polygon is called a " + polygon + "decagon.";
-            document.getElementById('output').innerHTML = output;  
-        }
-        else if(numberEntered == 13)
-        {
-            var polygon = "tri";
-            var output = "The corresponding polygon is called a " + polygon + "decagon.";
-            document.getElementById('output').innerHTML = output;  
-        }
-        else if(numberEntered == 14)
-        {
-            var polygon = "tetra";
-            var output = "The corresponding polygon is called a " + polygon + "decagon.";
-            document.getElementById('output').innerHTML = output;  
-        }
-        else if(numberEntered == 15)
-        {
-            var polygon = "penta";
-            var output = "The corresponding polygon is called a " + polygon + "decagon.";
-            document.getElementById('output').innerHTML = output;  
-        }
-        else if(numberEntered == 16)
-        {
-            var polygon = "hexa";
-            var output = "The corresponding polygon is called a " + polygon + "decagon.";
-            document.getElementById('output').innerHTML = output;  
-        }
-        else if(numberEntered == 17)
-        {
-            var polygon = "hepta";
-            var output = "The corresponding polygon is called a " + polygon + "decagon.";
-            document.getElementById('output').innerHTML = output;  
-        }
-        else if(numberEntered == 18)
-        {
-            var polygon = "octa";
-            var output = "The corresponding polygon is called a " + polygon + "decagon.";
-            document.getElementById('output').innerHTML = output;  
-        }
-        else if(numberEntered == 19)
-        {
-            var polygon = "ennea";
-            var output = "The corresponding polygon is called a " + polygon + "decagon.";
-            document.getElementById('output').innerHTML = output;  
-        }
-        else if(numberEntered == 20)
-        {
-            var polygon = "icos";
-            var output = "The corresponding polygon is called a " + polygon + "agon.";
-            document.getElementById('output').innerHTML = output;  
-        }
+        enterNumber.value = Math.abs(enterNumber.value);
+        absoluteNumberOutput.innerText = `The number was converted to a positive number: ${enterNumber.value}.`; 
+    }
+
+    if(enterNumber.value > 10 && enterNumber.value < 20) 
+    {
+        output.innerText = `The corresponding polygon is called a ${polygon}decagon.`;
     } 
-    else
+    else if(enterNumber.value > 0 && enterNumber.value < 11 || enterNumber.value == 20)
     {
-        var numberEntered = document.getElementById("userPrompt").value;
-        alert("Oops! You entered " + numberEntered + ". Please enter a value between 1 and 20");
+        output.innerText = `The corresponding polygon is called a ${polygon}gon.`;   
+    }
+    else if(enterNumber.value > 20)
+    {
+        output.innerText = "Error, please enter a number from 1 and 20";
     }
 }
 
 //Function to reset the form
-function resetEntry()
+function resetForm(event)
 {
-    document.getElementById("polygon_form").reset;
-    var output = " ";
-    document.getElementById('output').innerHTML = output; 
+    location.reload();
 }
+
+

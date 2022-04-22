@@ -6,22 +6,22 @@
     <link rel="icon" href="images/favicon.ico">
     <link href="styles/default.css" type="text/css" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative&display=swap" rel="stylesheet"/>
-    <script src="scripts/name_the_polygon_script.js"></script>
   </head>
   <body>
     <header>
-      <div data-include="components/header.html"></div> 
+      <div data-include="components/header.html"></div>
     </header>
     <main>
         <h2>Name The Polygon</h2>
-        <form id="polygon-form">
-            <label for="user-prompt">The Pink Sloth <img src="images/sloth_logo.png" width="50px" height="50px"> wants you to enter a number between 1 and 20: </label>
-            <input type="number" id="user-prompt"><br><br>
-            <button type="button" id="submit-button" onclick="submitButton()">Submit</button>
-            <input type="reset" id="reset-button" onclick="resetEntry()"><!--This button is to reset the inputs in the forms-->
+        <p>The Pink Sloth <img src="images/sloth_logo(50x50).png"> wants you to enter a number between 1 and 20: </p>
+        <form>
+            <input type="number" name="enterNumber" id="enterNumber" placeholder=" "><br><br>
+            <button type="submit" id="submitButton" onclick="submitForm(event)" disabled>Submit</button>
+            <button type="reset" id="resetButton" onclick="resetForm(event)" disabled>Reset</button>
         </form>
         <br>
         <br>
+        <p id="absoluteNumberOutput"></p>
         <p id="output"></p>
         <br>
         <br>
@@ -33,6 +33,7 @@
       <a href="https://validator.w3.org/check?uri=pscott20.github.io/itis3135/name_the_polygon.html"><img src="images/button_validation_html5.png" alt="HTML5 Validation" id="validation_link_html"/></a>
       <a href="https://jigsaw.w3.org/css-validator/validator?uri=pscott20.github.io/itis3135/name_the_polygon.html"><img src="images/button_validation_css.png" alt="CSS Validation" id="validation_link_css"/></a>
     </footer>
+    <script src="scripts/name_the_polygon_script.js"></script>
     <script src="../scripts/include.js"></script>
   </body>
 </html>
