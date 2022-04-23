@@ -4,6 +4,10 @@ const output = document.getElementById('output');
 
 let polygon = "hena";
 
+enterNumber.addEventListener("keyup", () => { //Set the buttons to disabled until a value is entered in the form.
+    submitButton.disabled = resetButton.disabled = !enterNumber.value; 
+});
+
 polygonAssign = (e) => {
     e.preventDefault(); //Prevents the form from submitting to a new page with the form properties as query parameters.
     if(enterNumber.value < 0)
