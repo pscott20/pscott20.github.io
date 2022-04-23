@@ -10,6 +10,7 @@ enterNumber.addEventListener("keyup", () => { //Set the buttons to disabled unti
 
 polygonAssign = (e) => {
     e.preventDefault(); //Prevents the form from submitting to a new page with the form properties as query parameters.
+    
     if(enterNumber.value < 0)
     {
         negativeNumber = enterNumber.value
