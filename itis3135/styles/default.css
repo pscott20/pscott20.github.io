@@ -362,3 +362,9 @@ a.nav-link:active
 .subnavbar:hover .subnavbar-content {
   display: block;
 }
+
+/* Image Swap Application */
+#image_list li
+{
+  display: inline;
+}
