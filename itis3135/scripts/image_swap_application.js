@@ -1,3 +1,5 @@
+const captionText = document.getElementById('captionText');
+
 $(document).ready(function()
 {
     // preload the image for each link
