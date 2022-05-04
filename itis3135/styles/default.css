@@ -391,3 +391,11 @@ a.nav-link:active
   align-self: center;
   display: inline;
 }
+
+/*Activity 12 Page*/
+#activity12-container
+{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}

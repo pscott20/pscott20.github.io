@@ -2,30 +2,39 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>bxSlider Plugin</title>
-    <link href="styles/Scott-Activity12.css" rel="stylesheet">
+    <title>Patrick Scott &#8869; ITIS3135 &#8869; Pink Sloth &#8869; bxSlider Plugin</title>
+    <link rel="icon" href="images/favicon.ico">
+    <link href="styles/default.css" type="text/css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative&display=swap" rel="stylesheet"/>
+    <!--<link href="styles/Scott-Activity12.css" rel="stylesheet">-->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.15/jquery.bxslider.min.css" rel="stylesheet" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.15/jquery.bxslider.min.js"></script>
     <script src="scripts/Scott-Activity12.js"></script>
 </head>
 <body>
+    <header>
+        <div data-include="components/header.html"></div>
+    </header>
     <main>
-        <h1>UNC Charlotte</h1>
-        <p>Let's explore our campus!</p>
-        <ul id="slider">
-            <li><img src="images/building_01.jpg" alt="" title="Entrance"></li>
-            <li><img src="images/building_02.jpg" alt="" title="Office"></li>
-            <li><img src="images/building_03.jpg" alt="" title="Housing"></li>
-            <li><img src="images/building_04.jpg" alt="" title="Stadium"></li>
-            <li><img src="images/building_05.jpg" alt="" title="Student Union"></li>
-        </ul>
-        <p id="id_pager"></p>
+        <div id="activity12-container">
+            <h1>UNC Charlotte</h1>
+            <p>Let's explore our campus!</p>
+            <ul id="slider">
+                <li><figure><img src="images/building_01.jpg" alt="" title="Entrance"><figcaption>Entrance</figcaption></figure></li>
+                <li><figure><img src="images/building_02.jpg" alt="" title="Office"><figcaption>Office</figcaption></figure></li>
+                <li><figure><img src="images/building_03.jpg" alt="" title="Housing"><figcaption>Housing</figcaption></figure></li>
+                <li><figure><img src="images/building_04.jpg" alt="" title="Stadium"><figcaption>Stadium</figcaption></figure></li>
+                <li><figure><img src="images/building_05.jpg" alt="" title="Student Union"><figcaption>Student Union</figcaption></figure></li>
+            </ul>
+            <p id="id_pager"></p>
+        </div>
     </main>
     <footer>
-        <br/>
-        <a href="https://validator.w3.org/check?uri=referer">Validate HTML</a>
-        <a href="https://jigsaw.w3.org/css-validator/check/referer">Validate CSS</a>
+        <div data-include="components/footer.html"></div>
+        <a href="https://validator.w3.org/check?uri=pscott20.github.io/itis3135/slideshow.html"><img src="images/button_validation_html5.png" alt="HTML5 Validation" id="validation_link_html"/></a>
+        <a href="https://jigsaw.w3.org/css-validator/validator?uri=pscott20.github.io/itis3135/slideshow.html"><img src="images/button_validation_css.png" alt="CSS Validation" id="validation_link_css"/></a>
     </footer>
+    <script src="../scripts/include.js"></script>
 </body>
 </html>
