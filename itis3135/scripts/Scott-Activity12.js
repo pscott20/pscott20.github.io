@@ -9,6 +9,5 @@ $(document).ready(function() {
         caption: true,
         speed: 3000,
         pager: true,
-        
     });
 });
