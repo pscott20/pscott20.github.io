@@ -1,0 +1,229 @@
+/*
+Brand Colors
+honda #c8102e / kawasaki #73A84A / suzuki #F7CD36 / yamaha #0e4bef
+*/
+:root
+{
+    background-color: #ef6b36;
+    font-size: 62.5%; /* This size is used because the default font size of most browsers is 16 pixels. 62.5% of 16 is 10. This way rem changes are increments of 10.*/
+}
+
+*
+{
+    box-sizing: border-box; /*If I add a border to a box then the border is included in the calculated size of the box.*/
+    font-family: 'Baumans', 'Franklin Gothic Medium', sans-serif;
+    color: #070707;
+    text-align: center;
+    margin: 0; /*This and padding gives us control over margins and padding*/
+    padding: 0;
+}
+
+/*Hide scrollbar for different browsers*/
+::-webkit-scrollbar 
+{
+    display: none; /*Chrome, Safari and Opera*/
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+figure
+{
+    text-align: center;
+}
+
+/*Index Page*/
+.flex-container-index
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/*Slideshow*/
+.slideshow-container
+{
+    margin: 1rem 0rem 10rem 0rem;
+}
+
+.projects_list li
+{
+  align-self: center;
+  display: inline;
+  margin-left: 0.25%;
+  margin-right: 0.25%;
+}
+
+.slide-number
+{
+  color: #f2f2f2;
+  background-color: black;
+  font-size: 14px;
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
+  position: absolute;
+}
+
+.fade 
+{
+  animation-name: fade;
+  animation-duration: 2.0s;
+}
+
+@keyframes fade 
+{
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+/*About Page*/
+.about-container 
+{
+    display: flex;
+    overflow: scroll;
+    margin-bottom: 15rem;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    flex-direction: row;
+    align-items: center;
+}
+
+.about-items
+{
+    width: 40%;
+    margin: 1rem;
+}
+  
+.about-items.about-text 
+{
+    
+    background-color: #d96232;
+    padding-bottom: 1rem;
+    border-radius: 2rem;
+    padding-left: 1rem; 
+}
+
+.about-items.about-text p
+{
+    text-align: left;
+}
+
+.about-items.about-text a
+{
+    text-decoration: none;
+}
+
+.about-img
+{
+    justify-content: center;
+    text-align: center;
+}
+
+/*Projects Page*/
+#projects-container
+{
+    margin-bottom: 10rem;
+}
+
+ul.projects_list
+{
+    padding: 1rem;
+}
+
+#projects-container p
+{
+    font-size: 2rem;
+}
+
+/* Customers Page*/
+.customers-container
+{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    margin-top: 1%;
+    margin-bottom: 5%;
+}
+
+.customers-container > div
+{
+    margin: 1%;
+}
+
+#reviewList li
+{
+    list-style-type: none;
+    padding: 4px 3px 4px 3px; 
+    border-top: solid black 2px;
+    border-bottom: solid black 2px;
+    border-left: solid black 1px;
+    border-right: solid black 1px;
+}
+
+.select-services 
+{
+    display: flex;
+    flex-direction: column;
+    margin: 0 40rem 5rem 40rem;
+    background-color: #999898;
+    border-radius: 15px;
+    padding: 20px;
+    align-items: center;
+}
+
+body > main > div > div.services-form > form > div > input[type=submit]:nth-child(15)
+{
+    margin-top: 0.5rem;
+    color: black;
+}
+
+table
+{
+    border: 2px solid #000000;
+    
+}
+
+tr:nth-child(even) 
+{
+    background-color: #b2b2b2;
+}
+
+tr:nth-child(odd) 
+{
+    background-color: #ffffff;
+}
+
+#review-table
+{
+    align-items: center;
+}
+
+th
+{
+    background-color: #ffffff;
+    padding: 1.25rem;
+    font-size: larger;
+}
+
+#review-table > tbody > tr > td
+{
+    padding: 1rem;
+}
+
+/*Store Page */
+.container-store
+{
+    margin: 10rem 20rem 20rem 20rem;
+}
+
+.link-image
+{
+    margin-bottom: 1rem;
+}
+
+.link-image:hover
+{
+    transform: scale(0.95);
+    
+}
+

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Shotty Cycle Plaza</title>
+    <link href="styles/default.css" type="text/css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Baumans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  </head>
+  <body>
+    <header>
+      <div data-include="components/header.html"></div>
+    </header>
+    <main>
+      <h1>Customers</h1>
+      <div class="customers-container">
+        <div class="review-form">
+          <h3>Submit Your Review</h3>
+          <form id="reviewForm">
+            <input type="text" id="reviewText" name="reviewText" placeholder="Enter your review">
+            <br>
+            <input type="text" id="reviewName" name="reviewName" placeholder="Enter your name">
+            <br>
+            <input type="submit" id="submit" value="Submit" onclick="setReviews(event)" disabled>
+          </form>
+        </div>
+        <div>
+            <h3>Past Reviews</h3>
+            <table id="review-table">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Review</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+        <div>
+          <ul id="reviewList"></ul>
+        </div>
+        <div class="services-form">
+          <h3>Submit to Request Service</h3>
+          <form>
+            <label for="make">Make:</label>
+            <br>
+            <input type="text" id="make" name="make" title="Enter the make of your motorcycle." required>
+            <br>
+            <label for="model">Model:</label>
+            <br>
+            <input type="text" id="model" name="model" title="Enter the model of your motorcycle." required>
+            <br>
+            <label for="year">Year:</label>
+            <br>
+            <input type="number" id="year" name="year" title="Enter the year of your motorcycle." required>
+            <br>
+            <label for="mileage">Mileage:</label>
+            <br>
+            <input type="number" id="mileage" name="mileage" title="Enter the mileage of Your Motorcycle." required>
+            <br>
+            <br>
+            <div class="select-services">
+              <h3>Select Services</h3>
+              <br>
+              <label for="oil">Oil & Filter Change</label>
+              <input type="checkbox" id="oil" name="oil" value="oil+filter_change" >
+              <label for="fluids">Total Fluid Change</label>
+              <input type="checkbox" id="fluids" name="fluids" value="total_fluid_change">
+              <label for="tire">Tire Change</label>
+              <input type="checkbox" id="tire" name="tire" value="tire_change">
+              <label for="engine">Engine Service</label>
+              <input type="checkbox" id="engine" name="engine" value="engine_service">
+              <label for="noise">It's making a wierd noise (Describe noise in additional information section)</label>
+              <input type="checkbox" id="noise" name="noise" value="wierd_noise">
+              <label for="additional">Additional Information (Optional)</label>
+              <input type="text" id="additional" name="additional">
+              <input type="submit" value="Submit" onclick="serviceForm(event)">
+            </div>
+          </form>
+        </div> 
+      </div>
+    </main>
+    <footer>
+        Shotty Cycle Plaza <a href="https://www.instagram.com/shotty_cycle_plaza/"><i class="fa fa-instagram" aria-hidden="true"></i></a> Located in Wyandotte, Kansas <br>
+        Created by<a href="https://pscott20.github.io/scottdesigns.net/index.html" class="nav-link"> Scott Designs &copy;2022</a>
+        <a href="https://validator.w3.org/nu/?doc=https://www.shottycycleplaza.com/customers.html"><img src="images/button_validation_html5(small).png" alt="HTML5 Validation" id="validation_link_html"/></a>
+        <a href="https://jigsaw.w3.org/css-validator/validator?uri=https://www.shottycycleplaza.com/customers.html">
+        <img src="images/button_validation_css(small).png" alt="CSS Validation" id="validation_link_css"/></a>
+    </footer>
+    <script src="https://use.fontawesome.com/3100547060.js"></script>
+    <script src="scripts/default_scripts.js"></script>
+    <script src="scripts/include.js"></script>
+  </body>
+</html>
